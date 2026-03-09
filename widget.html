@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Widget Problemi</title>
+  <style>
+    :root {
+      --line: rgba(148,163,184,0.18);
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+    }
+    body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: transparent; color: var(--text); }
+    .panel {
+      background: linear-gradient(180deg, rgba(15,23,42,.95), rgba(17,24,39,.95));
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .head { display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom: 14px; }
+    .head h2 { margin:0; font-size:1.2rem; }
+    .mini { color: var(--muted); font-size:.9rem; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:14px; }
+    .card { border:1px solid var(--line); border-radius:16px; padding:14px; background: rgba(255,255,255,.02); }
+    .card h3 { margin:0 0 12px; }
+    .problem { border-top:1px solid var(--line); margin-top:12px; padding-top:12px; }
+    .problem:first-of-type { border-top:none; margin-top:0; padding-top:0; }
+    .slot { color: var(--accent); font-size:.82rem; text-transform:uppercase; font-weight:700; letter-spacing:.08em; margin-bottom:6px; }
+    .title { font-weight:700; margin-bottom:8px; }
+    .meta { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:8px; }
+    .badge { border-radius:999px; padding:4px 8px; font-size:.8rem; color:#cbd5e1; background:rgba(148,163,184,.12); border:1px solid rgba(148,163,184,.18); }
+    .body { margin:0; line-height:1.45; color:#dbe4ef; }
+    .footer { margin-top:12px; color:var(--muted); font-size:.82rem; }
+  </style>
+</head>
+<body>
+  <div class="panel" id="app">Caricamento...</div>
+  <script>
+    const API_URL = './current.json';
+
+    async function init() {
+      const app = document.getElementById('app');
+      try {
+        const res = await fetch(API_URL + '?v=' + Date.now());
+        if (!res.ok) throw new Error('File current.json non raggiungibile');
+        const data = await res.json();
+
+        app.innerHTML = `
+          <div class="head">
+            <h2>Problemi della settimana</h2>
+            <div class="mini">Lunedì · Giovedì</div>
+          </div>
+          <div class="grid">
+            ${renderClass('3C INFO — C', data['3C'])}
+            ${renderClass('4C INFO — Java', data['4C'])}
+          </div>
+          <div class="footer">Aggiornato: ${escapeHtml(data.generated_at || 'n/d')}</div>
+        `;
+      } catch (e) {
+        app.innerHTML = 'Errore nel caricamento del widget: ' + escapeHtml(e.message);
+      }
+    }
+
+    function renderClass(name, cls) {
+      return `
+        <div class="card">
+          <h3>${escapeHtml(name)}</h3>
+          ${renderProblem('Lunedì', cls?.lunedi)}
+          ${renderProblem('Giovedì', cls?.giovedi)}
+        </div>
+      `;
+    }
+
+    function renderProblem(slot, p) {
+      if (!p) return `<div class="problem"><div class="slot">${slot}</div><p class="body">Nessun problema disponibile.</p></div>`;
+      return `
+        <div class="problem">
+          <div class="slot">${slot}</div>
+          <div class="title">${escapeHtml(p.title)}</div>
+          <div class="meta">
+            <span class="badge">${escapeHtml(p.topic)}</span>
+            <span class="badge">${escapeHtml(p.difficulty)}</span>
+          </div>
+          <p class="body">${escapeHtml(p.body)}</p>
+        </div>
+      `;
+    }
+
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    init();
+  </script>
+</body>
+</html>

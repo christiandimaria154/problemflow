@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Problemi della settimana</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --muted: #94a3b8;
+      --text: #e5e7eb;
+      --accent: #38bdf8;
+      --line: rgba(148, 163, 184, 0.18);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #0b1220 0%, #111827 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 18px 48px; }
+    .hero {
+      margin-bottom: 24px; padding: 24px; border-radius: 20px;
+      background: linear-gradient(135deg, rgba(56,189,248,0.18), rgba(167,139,250,0.18));
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    h1 { margin: 0 0 8px; font-size: 2rem; }
+    .subtitle { color: var(--muted); line-height: 1.5; margin: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px; }
+    .class-card {
+      background: rgba(17,24,39,0.88); border: 1px solid var(--line);
+      border-radius: 20px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+    .class-card h2 { margin: 0 0 16px; font-size: 1.25rem; }
+    .problem { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 14px; }
+    .problem:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+    .slot {
+      font-size: 0.85rem; letter-spacing: .08em; text-transform: uppercase;
+      color: var(--accent); font-weight: 700; margin-bottom: 6px;
+    }
+    .title { font-size: 1.08rem; font-weight: 700; margin: 0 0 8px; }
+    .meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+    .badge {
+      border-radius: 999px; padding: 5px 10px; font-size: 0.82rem;
+      background: rgba(148,163,184,0.14); border: 1px solid rgba(148,163,184,0.18); color: #cbd5e1;
+    }
+    .body { color: #dbe4ef; line-height: 1.5; margin: 0; }
+    .footer { margin-top: 22px; color: var(--muted); font-size: 0.9rem; }
+    .loading, .error {
+      padding: 18px; border-radius: 16px; background: rgba(17,24,39,0.88); border: 1px solid var(--line);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Problemi della settimana</h1>
+      <p class="subtitle">
+        Due pubblicazioni fisse per ciascuna classe: <strong>lunedì</strong> e <strong>giovedì</strong>.
+        3C INFO lavora su <strong>C</strong>, 4C INFO su <strong>Java</strong>.
+      </p>
+    </section>
+
+    <div id="app">
+      <div class="loading">Caricamento problemi in corso...</div>
+    </div>
+  </div>
+
+  <script>
+    async function loadProblems() {
+      const app = document.getElementById('app');
+      try {
+        const res = await fetch('./current.json?v=' + Date.now());
+        if (!res.ok) throw new Error('Impossibile leggere current.json');
+        const data = await res.json();
+
+        const classes = ['3C', '4C'];
+        const names = { '3C': '3C INFO — C', '4C': '4C INFO — Java' };
+
+        const cards = classes.map(cls => {
+          const monday = data[cls]?.lunedi;
+          const thursday = data[cls]?.giovedi;
+          return `
+            <article class="class-card">
+              <h2>${names[cls]}</h2>
+              ${renderProblem('Lunedì', monday)}
+              ${renderProblem('Giovedì', thursday)}
+            </article>
+          `;
+        }).join('');
+
+        app.innerHTML = `
+          <section class="grid">${cards}</section>
+          <div class="footer">
+            Ultimo aggiornamento: ${data.generated_at ?? 'n/d'} · Pagina pubblicata con GitHub Pages.
+          </div>
+        `;
+      } catch (err) {
+        app.innerHTML = `<div class="error">Errore nel caricamento dei problemi: ${err.message}</div>`;
+      }
+    }
+
+    function renderProblem(label, p) {
+      if (!p) {
+        return `<div class="problem"><div class="slot">${label}</div><p class="body">Nessun problema disponibile per questo slot.</p></div>`;
+      }
+      return `
+        <div class="problem">
+          <div class="slot">${label}</div>
+          <div class="title">${escapeHtml(p.title)}</div>
+          <div class="meta">
+            <span class="badge">${escapeHtml(p.topic)}</span>
+            <span class="badge">${escapeHtml(p.difficulty)}</span>
+            <span class="badge">${escapeHtml(p.language)}</span>
+          </div>
+          <p class="body">${escapeHtml(p.body)}</p>
+        </div>
+      `;
+    }
+
+    function escapeHtml(str) {
+      return String(str ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#039;');
+    }
+
+    loadProblems();
+  </script>
+</body>
+</html>

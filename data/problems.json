@@ -1,0 +1,402 @@
+[
+  {
+    "id": "3C-C-001",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "funzioni",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Conta sopra la media",
+    "body": "Scrivi una funzione in C che riceve un array di interi e la sua lunghezza e restituisce quanti elementi sono strettamente maggiori della media di tutti i valori presenti nell'array."
+  },
+  {
+    "id": "3C-C-002",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "array",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Primo duplicato",
+    "body": "Dato un array di interi, scrivi un programma in C che determini il primo valore che compare almeno due volte, mantenendo l'ordine di scansione dell'array."
+  },
+  {
+    "id": "3C-C-003",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "stringhe",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Conta vocali e consonanti",
+    "body": "Scrivi una funzione che riceve una stringa e conta separatamente vocali e consonanti, ignorando spazi, cifre e simboli."
+  },
+  {
+    "id": "3C-C-004",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "matrici",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Somma della diagonale dominante",
+    "body": "Data una matrice quadrata di interi, calcola la somma della diagonale principale e della diagonale secondaria e stampa quale delle due ha somma maggiore."
+  },
+  {
+    "id": "3C-C-005",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "struct",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Studente migliore",
+    "body": "Definisci una struct Studente con nome, cognome e media. Dato un array di struct, individua e stampa lo studente con la media più alta."
+  },
+  {
+    "id": "3C-C-006",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "array",
+    "difficulty": "facile",
+    "preferred_slot": "lunedi",
+    "title": "Valori in intervallo",
+    "body": "Scrivi una funzione che conta quanti elementi di un array appartengono all'intervallo chiuso [a, b]."
+  },
+  {
+    "id": "3C-C-007",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "stringhe",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Parola più lunga",
+    "body": "Data una frase inserita da tastiera, individua la parola più lunga senza usare librerie avanzate oltre a string.h."
+  },
+  {
+    "id": "3C-C-008",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "funzioni",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Numero perfetto",
+    "body": "Scrivi una funzione che stabilisce se un numero è perfetto, cioè uguale alla somma dei suoi divisori positivi escluso se stesso."
+  },
+  {
+    "id": "3C-C-009",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "matrici",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Riga con somma massima",
+    "body": "Data una matrice di interi, individua l'indice della riga che ha la somma degli elementi più alta."
+  },
+  {
+    "id": "3C-C-010",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "struct",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Rubrica essenziale",
+    "body": "Definisci una struct Contatto con nome e telefono. Dato un array di contatti, cerca un nome e stampa il relativo numero se presente."
+  },
+  {
+    "id": "3C-C-011",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "puntatori",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Scambio tramite puntatori",
+    "body": "Scrivi una funzione che riceve due puntatori a int e scambia i valori contenuti nelle due variabili puntate."
+  },
+  {
+    "id": "3C-C-012",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "malloc/free",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Filtra i positivi",
+    "body": "Dato un array dinamico di interi, crea con malloc un nuovo array contenente solo i valori positivi, mantenendo l'ordine originale."
+  },
+  {
+    "id": "3C-C-013",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "malloc/free",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Copia senza duplicati consecutivi",
+    "body": "Scrivi una funzione che costruisce dinamicamente un nuovo array uguale all'originale ma senza ripetizioni consecutive."
+  },
+  {
+    "id": "3C-C-014",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "puntatori",
+    "difficulty": "tosto",
+    "preferred_slot": "giovedi",
+    "title": "Massimo tramite aritmetica dei puntatori",
+    "body": "Dato un array di interi e la sua lunghezza, individua il massimo usando solo aritmetica dei puntatori, senza operatore []."
+  },
+  {
+    "id": "3C-C-015",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "liste",
+    "difficulty": "tosto",
+    "preferred_slot": "giovedi",
+    "title": "Inserimento in testa",
+    "body": "Definisci un nodo di lista collegata contenente un intero e scrivi la funzione che inserisce un nuovo nodo in testa."
+  },
+  {
+    "id": "3C-C-016",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "liste",
+    "difficulty": "tosto",
+    "preferred_slot": "giovedi",
+    "title": "Conta i nodi pari",
+    "body": "Data una lista collegata di interi, scrivi una funzione che restituisce quanti nodi contengono un valore pari."
+  },
+  {
+    "id": "3C-C-017",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "struct",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Archivio prodotti dinamico",
+    "body": "Definisci una struct Prodotto con codice e prezzo. Alloca dinamicamente un array di prodotti e individua quello col prezzo più basso."
+  },
+  {
+    "id": "3C-C-018",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "malloc/free",
+    "difficulty": "tosto",
+    "preferred_slot": "giovedi",
+    "title": "Concatena due stringhe dinamicamente",
+    "body": "Scrivi una funzione che allochi una nuova stringa contenente la concatenazione di due stringhe date in input."
+  },
+  {
+    "id": "3C-C-019",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "puntatori",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Somma tramite indirizzi",
+    "body": "Scrivi una funzione che, ricevuti due puntatori a int, restituisce la somma dei valori puntati senza modificare le variabili originali."
+  },
+  {
+    "id": "3C-C-020",
+    "class_code": "3C",
+    "language": "C",
+    "topic": "liste",
+    "difficulty": "tosto",
+    "preferred_slot": "giovedi",
+    "title": "Elimina il primo nodo con valore dato",
+    "body": "Data una lista collegata e un valore x, scrivi la funzione che elimina il primo nodo contenente x e aggiorna correttamente la testa."
+  },
+  {
+    "id": "4C-J-001",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "classi e oggetti",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Classe Studente",
+    "body": "Definisci una classe Studente con attributi nome, cognome e media, un costruttore completo e un metodo toString()."
+  },
+  {
+    "id": "4C-J-002",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "costruttori",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Contatore di oggetti",
+    "body": "Crea una classe Libro che mantenga anche un contatore statico del numero di oggetti creati."
+  },
+  {
+    "id": "4C-J-003",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "ArrayList",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Lista di numeri pari",
+    "body": "Scrivi un programma che riempie un ArrayList<Integer> con i numeri pari da 2 a 30 e poi li stampa in ordine."
+  },
+  {
+    "id": "4C-J-004",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "incapsulamento",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Classe ContoCorrente",
+    "body": "Progetta una classe ContoCorrente con saldo privato, metodo deposita e metodo preleva che impedisca saldo negativo."
+  },
+  {
+    "id": "4C-J-005",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "metodi",
+    "difficulty": "facile",
+    "preferred_slot": "lunedi",
+    "title": "Rettangolo",
+    "body": "Definisci una classe Rettangolo con base, altezza e un metodo area()."
+  },
+  {
+    "id": "4C-J-006",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "ArrayList",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Media voti",
+    "body": "Data una lista di voti interi in un ArrayList, calcola la media e stampa quanti voti sono superiori alla media."
+  },
+  {
+    "id": "4C-J-007",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "classi e oggetti",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Classe Prodotto",
+    "body": "Crea una classe Prodotto con nome e prezzo e un metodo che restituisce una descrizione testuale dell'oggetto."
+  },
+  {
+    "id": "4C-J-008",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "costruttori",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Punto nel piano",
+    "body": "Definisci una classe Punto con coordinate x e y, costruttore e metodo distanzaDallOrigine()."
+  },
+  {
+    "id": "4C-J-009",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "incapsulamento",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Classe Timer",
+    "body": "Realizza una classe Timer con secondi privati e metodi per aumentare o azzerare il valore."
+  },
+  {
+    "id": "4C-J-010",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "metodi",
+    "difficulty": "medio",
+    "preferred_slot": "lunedi",
+    "title": "Classe Squadra",
+    "body": "Definisci una classe Squadra con nome e punti e un metodo confronta che restituisca la squadra con più punti."
+  },
+  {
+    "id": "4C-J-011",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "ereditarieta",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Gerarchia Veicoli",
+    "body": "Definisci una superclasse Veicolo e due sottoclassi Auto e Moto, ognuna con una propria descrizione dell'oggetto."
+  },
+  {
+    "id": "4C-J-012",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "polimorfismo",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Dipendenti e compenso",
+    "body": "Definisci una classe astratta Dipendente con metodo calcolaCompenso() e due sottoclassi che implementano il metodo in modo diverso."
+  },
+  {
+    "id": "4C-J-013",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "interfacce",
+    "difficulty": "tosto",
+    "preferred_slot": "giovedi",
+    "title": "Oggetti confrontabili",
+    "body": "Crea una classe Prodotto che implementi un'interfaccia tua per confrontare due prodotti in base al prezzo."
+  },
+  {
+    "id": "4C-J-014",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "classi astratte",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Figure geometriche",
+    "body": "Definisci una classe astratta Figura con metodo area() e crea almeno due sottoclassi concrete."
+  },
+  {
+    "id": "4C-J-015",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "override",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Animali e verso",
+    "body": "Definisci una classe Animale con metodo verso() e due sottoclassi che ridefiniscono il metodo."
+  },
+  {
+    "id": "4C-J-016",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "polimorfismo",
+    "difficulty": "tosto",
+    "preferred_slot": "giovedi",
+    "title": "Collezione di mezzi",
+    "body": "Inserisci oggetti Auto e Moto in un ArrayList<Veicolo> e mostra dove avviene il binding dinamico."
+  },
+  {
+    "id": "4C-J-017",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "interfacce",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Dispositivi stampabili",
+    "body": "Crea un'interfaccia Stampabile con metodo stampaInfo() e implementala in due classi diverse."
+  },
+  {
+    "id": "4C-J-018",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "eccezioni",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Divisione protetta",
+    "body": "Scrivi un programma che gestisca correttamente una divisione per zero con try-catch."
+  },
+  {
+    "id": "4C-J-019",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "ereditarieta",
+    "difficulty": "medio",
+    "preferred_slot": "giovedi",
+    "title": "Gerarchia spedizioni",
+    "body": "Definisci una classe Spedizione e due sottoclassi con un metodo costo() ridefinito in modo diverso."
+  },
+  {
+    "id": "4C-J-020",
+    "class_code": "4C",
+    "language": "Java",
+    "topic": "classi astratte",
+    "difficulty": "tosto",
+    "preferred_slot": "giovedi",
+    "title": "Account multimediali",
+    "body": "Definisci una classe astratta Contenuto con metodo riproduci() e almeno due sottoclassi concrete."
+  }
+]
