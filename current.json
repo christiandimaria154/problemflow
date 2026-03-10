@@ -43,6 +43,16 @@
       "preferred_slot": "giovedi",
       "title": "Gerarchia Veicoli",
       "body": "Definisci una superclasse Veicolo e due sottoclassi Auto e Moto, ognuna con una propria descrizione dell'oggetto."
+    },
+    "giovedi": {
+      "id": "4C-J-011",
+      "class_code": "4C",
+      "language": "Java",
+      "topic": "ereditarieta",
+      "difficulty": "medio",
+      "preferred_slot": "giovedi",
+      "title": "Gerarchia Veicoli",
+      "body": "Definisci una superclasse Veicolo e due sottoclassi Auto e Moto, ognuna con una propria descrizione dell'oggetto."
     }
   }
 }
