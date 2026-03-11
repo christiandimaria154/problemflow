@@ -4,16 +4,12 @@ on:
   workflow_dispatch:
     inputs:
       force_slot:
-        description: "Slot da pubblicare"
-        required: true
-        default: "lunedi"
-        type: choice
-        options:
-          - lunedi
-          - giovedi
+        description: "Slot da pubblicare (lunedi oppure giovedi)"
+        required: false
+        default: ""
   schedule:
-    - cron: '0 6 * * 1'
-    - cron: '0 6 * * 4'
+    - cron: "0 5 * * 1"
+    - cron: "0 5 * * 4"
 
 permissions:
   contents: write
@@ -21,6 +17,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,17 +25,17 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
-      - name: Publish selected slot
-        run: python scripts/publish.py
+      - name: Run publisher
         env:
           FORCE_SLOT: ${{ github.event.inputs.force_slot }}
+        run: python scripts/publish.py
 
-      - name: Commit updated files
+      - name: Commit and push updated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add current.json data/state.json
-          git diff --cached --quiet || git commit -m "Aggiorna problemi della settimana"
+          git add current.json state.json
+          git diff --cached --quiet || git commit -m "Update current problems"
           git push
