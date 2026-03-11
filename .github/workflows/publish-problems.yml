@@ -3,13 +3,14 @@ name: Publish problems
 on:
   workflow_dispatch:
     inputs:
-      force_slot:
+      slot:
         description: "Slot da pubblicare (lunedi oppure giovedi)"
-        required: false
-        default: ""
+        required: true
+        default: "lunedi"
+        type: string
   schedule:
-    - cron: "0 5 * * 1"
-    - cron: "0 5 * * 4"
+    - cron: "0 6 * * 1"
+    - cron: "0 6 * * 4"
 
 permissions:
   contents: write
@@ -27,15 +28,49 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Determine slot
+        id: slot
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "slot=${{ github.event.inputs.slot }}" >> "$GITHUB_OUTPUT"
+          else
+            DAY=$(date -u +%u)
+            if [ "$DAY" = "1" ]; then
+              echo "slot=lunedi" >> "$GITHUB_OUTPUT"
+            elif [ "$DAY" = "4" ]; then
+              echo "slot=giovedi" >> "$GITHUB_OUTPUT"
+            else
+              echo "slot=" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Validate slot
+        shell: bash
+        run: |
+          SLOT="${{ steps.slot.outputs.slot }}"
+          if [ "$SLOT" != "lunedi" ] && [ "$SLOT" != "giovedi" ]; then
+            echo "Slot non valido: '$SLOT'"
+            exit 1
+          fi
+
       - name: Run publisher
         env:
-          FORCE_SLOT: ${{ github.event.inputs.force_slot }}
+          FORCE_SLOT: ${{ steps.slot.outputs.slot }}
         run: python scripts/publish.py
 
-      - name: Commit and push updated files
+      - name: Commit updated files
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add current.json state.json
-          git diff --cached --quiet || git commit -m "Update current problems"
+
+          if git diff --cached --quiet; then
+            echo "Nessuna modifica da committare"
+            exit 0
+          fi
+
+          git commit -m "Aggiorna problemi slot ${{ steps.slot.outputs.slot }}"
           git push
