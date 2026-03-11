@@ -418,28 +418,6 @@
     "active": true
   },
   {
-    "id": "3C-C-039",
-    "class_code": "3C",
-    "language": "C",
-    "topic": "malloc/free",
-    "difficulty": "tosto",
-    "preferred_slot": "giovedi",
-    "title": "Rimuovi negativi",
-    "body": "Scrivi una funzione che crea dinamicamente un nuovo array uguale a quello di partenza ma senza i valori negativi, aggiornando anche la lunghezza.",
-    "active": true
-  },
-  {
-    "id": "3C-C-040",
-    "class_code": "3C",
-    "language": "C",
-    "topic": "liste",
-    "difficulty": "tosto",
-    "preferred_slot": "giovedi",
-    "title": "Somma valori lista",
-    "body": "Data una lista collegata di interi, scrivi una funzione che restituisce la somma di tutti i valori contenuti nei nodi.",
-    "active": true
-  },
-  {
     "id": "3C-C-041",
     "class_code": "3C",
     "language": "C",
@@ -459,94 +437,6 @@
     "preferred_slot": "lunedi",
     "title": "Media dei pari",
     "body": "Scrivi una funzione che riceve un array di interi e restituisce la media dei soli valori pari presenti.",
-    "active": true
-  },
-  {
-    "id": "3C-C-043",
-    "class_code": "3C",
-    "language": "C",
-    "topic": "stringhe",
-    "difficulty": "medio",
-    "preferred_slot": "giovedi",
-    "title": "Rimuovi spazi iniziali e finali",
-    "body": "Scrivi una funzione che elimina da una stringa gli spazi iniziali e finali, lasciando invariata la parte centrale.",
-    "active": true
-  },
-  {
-    "id": "3C-C-044",
-    "class_code": "3C",
-    "language": "C",
-    "topic": "puntatori",
-    "difficulty": "medio",
-    "preferred_slot": "lunedi",
-    "title": "Azzeramento variabile",
-    "body": "Scrivi una funzione che riceve un puntatore a int e assegna 0 alla variabile puntata.",
-    "active": true
-  },
-  {
-    "id": "3C-C-045",
-    "class_code": "3C",
-    "language": "C",
-    "topic": "matrici",
-    "difficulty": "medio",
-    "preferred_slot": "giovedi",
-    "title": "Conta superiori alla media della matrice",
-    "body": "Scrivi una funzione che riceve una matrice di interi e restituisce quanti elementi sono strettamente maggiori della media globale della matrice.",
-    "active": true
-  },
-  {
-    "id": "3C-C-046",
-    "class_code": "3C",
-    "language": "C",
-    "topic": "struct",
-    "difficulty": "medio",
-    "preferred_slot": "lunedi",
-    "title": "Ricerca per codice",
-    "body": "Definisci una struct Libro con codice, titolo e pagine. Scrivi una funzione che cerca un libro dato il codice e restituisce la posizione della prima corrispondenza.",
-    "active": true
-  },
-  {
-    "id": "3C-C-047",
-    "class_code": "3C",
-    "language": "C",
-    "topic": "malloc/free",
-    "difficulty": "medio",
-    "preferred_slot": "giovedi",
-    "title": "Copia inversa",
-    "body": "Scrivi una funzione che crea dinamicamente un nuovo array contenente gli elementi dell'array originale in ordine inverso.",
-    "active": true
-  },
-  {
-    "id": "3C-C-048",
-    "class_code": "3C",
-    "language": "C",
-    "topic": "liste",
-    "difficulty": "tosto",
-    "preferred_slot": "giovedi",
-    "title": "Ultimo nodo",
-    "body": "Data una lista collegata, scrivi una funzione che restituisce il puntatore all'ultimo nodo oppure NULL se la lista è vuota.",
-    "active": true
-  },
-  {
-    "id": "3C-C-049",
-    "class_code": "3C",
-    "language": "C",
-    "topic": "array",
-    "difficulty": "medio",
-    "preferred_slot": "lunedi",
-    "title": "Conta cambi di segno",
-    "body": "Scrivi una funzione che riceve un array di interi e restituisce quante volte, passando da un elemento al successivo, cambia il segno del valore.",
-    "active": true
-  },
-  {
-    "id": "3C-C-050",
-    "class_code": "3C",
-    "language": "C",
-    "topic": "stringhe",
-    "difficulty": "medio",
-    "preferred_slot": "lunedi",
-    "title": "Conta consonanti",
-    "body": "Scrivi una funzione che riceve una stringa e restituisce il numero di consonanti alfabetiche presenti.",
     "active": true
   },
   {
@@ -946,17 +836,6 @@
     "active": true
   },
   {
-    "id": "4C-J-037",
-    "class_code": "4C",
-    "language": "Java",
-    "topic": "ereditarieta",
-    "difficulty": "medio",
-    "preferred_slot": "giovedi",
-    "title": "File digitali",
-    "body": "Definisci una superclasse FileDigitale e due sottoclassi Immagine e Documento con attributi aggiuntivi.",
-    "active": true
-  },
-  {
     "id": "4C-J-038",
     "class_code": "4C",
     "language": "Java",
@@ -965,28 +844,6 @@
     "preferred_slot": "lunedi",
     "title": "Trasporti",
     "body": "Definisci una gerarchia MezzoTrasporto con metodo descrivi() ridefinito da Bus e Treno.",
-    "active": true
-  },
-  {
-    "id": "4C-J-039",
-    "class_code": "4C",
-    "language": "Java",
-    "topic": "classi astratte e interfacce",
-    "difficulty": "medio",
-    "preferred_slot": "giovedi",
-    "title": "Stampabile",
-    "body": "Definisci un'interfaccia Stampabile con metodo stampa() e implementala in almeno due classi.",
-    "active": true
-  },
-  {
-    "id": "4C-J-040",
-    "class_code": "4C",
-    "language": "Java",
-    "topic": "eccezioni",
-    "difficulty": "medio",
-    "preferred_slot": "giovedi",
-    "title": "Lettura input numerico",
-    "body": "Scrivi un frammento che legge un intero da tastiera e gestisce il caso di input non numerico.",
     "active": true
   },
   {
@@ -1012,28 +869,6 @@
     "active": true
   },
   {
-    "id": "4C-J-043",
-    "class_code": "4C",
-    "language": "Java",
-    "topic": "incapsulamento",
-    "difficulty": "medio",
-    "preferred_slot": "giovedi",
-    "title": "Username valido",
-    "body": "Definisci una classe Utente con username privato e setter che rifiuti stringhe vuote.",
-    "active": true
-  },
-  {
-    "id": "4C-J-044",
-    "class_code": "4C",
-    "language": "Java",
-    "topic": "ArrayList",
-    "difficulty": "medio",
-    "preferred_slot": "giovedi",
-    "title": "Conta stringhe lunghe",
-    "body": "Scrivi un metodo che riceve un ArrayList<String> e conta quante stringhe hanno lunghezza maggiore di 5.",
-    "active": true
-  },
-  {
     "id": "4C-J-045",
     "class_code": "4C",
     "language": "Java",
@@ -1042,61 +877,6 @@
     "preferred_slot": "lunedi",
     "title": "Eventi",
     "body": "Definisci una superclasse Evento e due sottoclassi Concerto e Conferenza con attributi specifici.",
-    "active": true
-  },
-  {
-    "id": "4C-J-046",
-    "class_code": "4C",
-    "language": "Java",
-    "topic": "polimorfismo",
-    "difficulty": "tosto",
-    "preferred_slot": "giovedi",
-    "title": "Documenti esportabili",
-    "body": "Definisci una gerarchia Documento con metodo esporta() ridefinito da PdfDocumento e CsvDocumento.",
-    "active": true
-  },
-  {
-    "id": "4C-J-047",
-    "class_code": "4C",
-    "language": "Java",
-    "topic": "classi astratte e interfacce",
-    "difficulty": "medio",
-    "preferred_slot": "lunedi",
-    "title": "Figura con perimetro",
-    "body": "Definisci una classe astratta Figura con metodo perimetro() e crea almeno due sottoclassi concrete.",
-    "active": true
-  },
-  {
-    "id": "4C-J-048",
-    "class_code": "4C",
-    "language": "Java",
-    "topic": "eccezioni",
-    "difficulty": "medio",
-    "preferred_slot": "giovedi",
-    "title": "Accesso nullo",
-    "body": "Scrivi un frammento che gestisca correttamente un possibile NullPointerException.",
-    "active": true
-  },
-  {
-    "id": "4C-J-049",
-    "class_code": "4C",
-    "language": "Java",
-    "topic": "classi e oggetti",
-    "difficulty": "medio",
-    "preferred_slot": "lunedi",
-    "title": "Classe Canzone",
-    "body": "Definisci una classe Canzone con titolo, artista e durata, costruttore e metodo toString().",
-    "active": true
-  },
-  {
-    "id": "4C-J-050",
-    "class_code": "4C",
-    "language": "Java",
-    "topic": "ArrayList",
-    "difficulty": "medio",
-    "preferred_slot": "giovedi",
-    "title": "Media lunghezze stringhe",
-    "body": "Scrivi un metodo che riceve un ArrayList<String> e restituisce la lunghezza media delle stringhe contenute.",
     "active": true
   }
 ]
