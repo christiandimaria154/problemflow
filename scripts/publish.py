@@ -1,77 +1,130 @@
 #!/usr/bin/env python3
 import json
 import os
+import random
 from datetime import datetime, timezone
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROBLEMS_FILE = os.path.join(BASE_DIR, "data", "problems.json")
-STATE_FILE = os.path.join(BASE_DIR, "data", "state.json")
-CURRENT_FILE = os.path.join(BASE_DIR, "current.json")
-VALID_SLOTS = {"lunedi", "giovedi"}
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+PROBLEMS_FILE = os.path.join(ROOT, 'data', 'problems.json')
+CURRENT_FILE = os.path.join(ROOT, 'current.json')
+STATE_FILE = os.path.join(ROOT, 'state.json')
+
+CLASS_CODES = ['3C', '4C']
+SLOTS = ['lunedi', 'giovedi']
+
 
 def load_json(path):
-    with open(path, "r", encoding="utf-8") as f:
+    with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
+
 def save_json(path, data):
-    with open(path, "w", encoding="utf-8") as f:
+    with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+        f.write('\n')
+
+
+def utc_now_iso():
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
+
 
 def detect_slot():
-    force_slot = os.environ.get("FORCE_SLOT", "").strip().lower()
-    if force_slot in VALID_SLOTS:
-        return force_slot
-    now = datetime.now(timezone.utc)
-    if now.weekday() == 0:
-        return "lunedi"
-    if now.weekday() == 3:
-        return "giovedi"
-    raise SystemExit("Oggi non è né lunedì né giovedì. Usa FORCE_SLOT=lunedi oppure FORCE_SLOT=giovedi.")
+    # Monday=0, Thursday=3
+    weekday = datetime.now(timezone.utc).weekday()
+    if weekday == 0:
+        return 'lunedi'
+    if weekday == 3:
+        return 'giovedi'
+    raise SystemExit('Oggi non è né lunedì né giovedì. Usa FORCE_SLOT per test manuali.')
 
-def week_key():
-    now = datetime.now(timezone.utc)
-    iso = now.isocalendar()
-    return f"{iso.year}-W{iso.week:02d}"
 
-def select_problem(problems, state, class_code, slot):
-    used = state["used_ids"][class_code][slot]
-    candidates = [p for p in problems if p["class_code"] == class_code and p["preferred_slot"] in (slot, "any")]
-    fresh = [p for p in candidates if p["id"] not in used]
-    if not fresh:
-        state["used_ids"][class_code][slot] = []
-        fresh = candidates
-    if not fresh:
-        raise SystemExit(f"Nessun problema disponibile per {class_code} - {slot}")
-    chosen = fresh[0]
-    state["used_ids"][class_code][slot].append(chosen["id"])
-    state["history"].append({
-        "published_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "week_key": week_key(),
-        "class_code": class_code,
-        "slot": slot,
-        "problem_id": chosen["id"]
-    })
+def compact_problem(problem):
+    return {
+        'id': problem['id'],
+        'topic': problem['topic'],
+        'difficulty': problem['difficulty'],
+        'title': problem['title'],
+        'body': problem['body']
+    }
+
+
+def choose_problem(problems, state, class_code, slot):
+    published_for_slot = state.setdefault('published', {}).setdefault(class_code, {}).setdefault(slot, [])
+    recent_ids = state.setdefault('recent_ids', [])
+    recent_limit = int(state.get('recent_limit', 16))
+
+    candidates = [
+        p for p in problems
+        if p.get('active', True)
+        and p['class_code'] == class_code
+        and p.get('preferred_slot', 'any') in (slot, 'any')
+        and p['id'] not in recent_ids
+        and p['id'] not in published_for_slot
+    ]
+
+    if not candidates:
+        candidates = [
+            p for p in problems
+            if p.get('active', True)
+            and p['class_code'] == class_code
+            and p.get('preferred_slot', 'any') in (slot, 'any')
+            and p['id'] not in published_for_slot
+        ]
+
+    if not candidates:
+        candidates = [
+            p for p in problems
+            if p.get('active', True)
+            and p['class_code'] == class_code
+            and p.get('preferred_slot', 'any') in (slot, 'any')
+        ]
+
+    if not candidates:
+        raise RuntimeError(f'Nessun problema disponibile per {class_code} / {slot}')
+
+    # Prefer less published overall, then random among best
+    counts = {}
+    for p in problems:
+        counts[p['id']] = 0
+    for cls, slot_map in state.get('published', {}).items():
+        for sl, ids in slot_map.items():
+            for pid in ids:
+                counts[pid] = counts.get(pid, 0) + 1
+
+    min_count = min(counts.get(p['id'], 0) for p in candidates)
+    best = [p for p in candidates if counts.get(p['id'], 0) == min_count]
+    chosen = random.choice(best)
+
+    published_for_slot.append(chosen['id'])
+    recent_ids.append(chosen['id'])
+    if len(recent_ids) > recent_limit:
+        del recent_ids[:-recent_limit]
+
     return chosen
 
+
 def main():
-    slot = detect_slot()
+    random.seed()
+
     problems = load_json(PROBLEMS_FILE)
+    current = load_json(CURRENT_FILE)
     state = load_json(STATE_FILE)
-    try:
-        current = load_json(CURRENT_FILE)
-    except FileNotFoundError:
-        current = {"3C": {}, "4C": {}}
 
-    for class_code in ("3C", "4C"):
-        current.setdefault(class_code, {})
-        current[class_code][slot] = select_problem(problems, state, class_code, slot)
+    slot = os.environ.get('FORCE_SLOT', '').strip().lower() or detect_slot()
+    if slot not in SLOTS:
+        raise SystemExit(f'Slot non valido: {slot}')
 
-    current["generated_at"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    current["week_key"] = week_key()
+    for class_code in CLASS_CODES:
+        problem = choose_problem(problems, state, class_code, slot)
+        current.setdefault(class_code, {})[slot] = compact_problem(problem)
 
-    save_json(STATE_FILE, state)
+    current['updated_at'] = utc_now_iso()
+
     save_json(CURRENT_FILE, current)
-    print(f"Pubblicazione completata per slot: {slot}")
+    save_json(STATE_FILE, state)
 
-if __name__ == "__main__":
+    print(f'Aggiornamento completato per slot: {slot}')
+
+
+if __name__ == '__main__':
     main()
