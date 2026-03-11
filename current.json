@@ -1,11 +1,23 @@
 {
   "3C": {
-    "lunedi": null,
+    "lunedi": {
+      "id": "3C-C-001",
+      "topic": "funzioni",
+      "difficulty": "medio",
+      "title": "Conta sopra la media",
+      "body": "Scrivi una funzione in C che riceve un array di interi e la sua lunghezza e restituisce quanti elementi sono strettamente maggiori della media di tutti i valori presenti nell'array."
+    },
     "giovedi": null
   },
   "4C": {
-    "lunedi": null,
+    "lunedi": {
+      "id": "4C-J-001",
+      "topic": "classi e oggetti",
+      "difficulty": "medio",
+      "title": "Classe Studente",
+      "body": "Definisci una classe Studente con attributi nome, cognome e media, un costruttore completo e un metodo toString()."
+    },
     "giovedi": null
   },
-  "updated_at": null
+  "updated_at": "2026-03-11T14:45:06+00:00"
 }
