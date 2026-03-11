@@ -1,130 +1,173 @@
-#!/usr/bin/env python3
+from __future__ import annotations
+
 import json
 import os
-import random
 from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
 
-ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PROBLEMS_FILE = os.path.join(ROOT, 'data', 'problems.json')
-CURRENT_FILE = os.path.join(ROOT, 'current.json')
-STATE_FILE = os.path.join(ROOT, 'state.json')
+ROOT = Path(__file__).resolve().parents[1]
+PROBLEMS_PATH = ROOT / "data" / "problems.json"
+CURRENT_PATH = ROOT / "current.json"
+STATE_PATH = ROOT / "state.json"
 
-CLASS_CODES = ['3C', '4C']
-SLOTS = ['lunedi', 'giovedi']
-
-
-def load_json(path):
-    with open(path, 'r', encoding='utf-8') as f:
-        return json.load(f)
+VALID_SLOTS = {"lunedi", "giovedi"}
+VALID_CLASSES = {"3C", "4C"}
 
 
-def save_json(path, data):
-    with open(path, 'w', encoding='utf-8') as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
-        f.write('\n')
+def load_json(path: Path, default: Any) -> Any:
+    if not path.exists():
+        return default
+    text = path.read_text(encoding="utf-8").strip()
+    if not text:
+        return default
+    return json.loads(text)
 
 
-def utc_now_iso():
-    return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
+def save_json(path: Path, data: Any) -> None:
+    path.write_text(
+        json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
 
 
-def detect_slot():
-    # Monday=0, Thursday=3
-    weekday = datetime.now(timezone.utc).weekday()
-    if weekday == 0:
-        return 'lunedi'
-    if weekday == 3:
-        return 'giovedi'
-    raise SystemExit('Oggi non è né lunedì né giovedì. Usa FORCE_SLOT per test manuali.')
+def normalize_slot(raw: str | None) -> str:
+    slot = (raw or "").strip().lower()
+    if slot not in VALID_SLOTS:
+        raise ValueError(f"Slot non valido: {slot!r}")
+    return slot
 
 
-def compact_problem(problem):
+def normalize_class(raw: str | None) -> str:
+    cls = (raw or "").strip().upper()
+    if cls not in VALID_CLASSES:
+        raise ValueError(f"Classe non valida: {cls!r}")
+    return cls
+
+
+def default_current() -> dict[str, Any]:
     return {
-        'id': problem['id'],
-        'topic': problem['topic'],
-        'difficulty': problem['difficulty'],
-        'title': problem['title'],
-        'body': problem['body']
+        "3C": {"lunedi": None, "giovedi": None},
+        "4C": {"lunedi": None, "giovedi": None},
+        "updated_at": None,
     }
 
 
-def choose_problem(problems, state, class_code, slot):
-    published_for_slot = state.setdefault('published', {}).setdefault(class_code, {}).setdefault(slot, [])
-    recent_ids = state.setdefault('recent_ids', [])
-    recent_limit = int(state.get('recent_limit', 16))
+def default_state() -> dict[str, Any]:
+    return {
+        "history": {
+            "3C": [],
+            "4C": [],
+        }
+    }
+
+
+def validate_problems(raw_problems: Any) -> list[dict[str, Any]]:
+    if not isinstance(raw_problems, list):
+        raise ValueError("data/problems.json deve contenere un array JSON")
+
+    validated: list[dict[str, Any]] = []
+
+    for idx, item in enumerate(raw_problems, start=1):
+        if not isinstance(item, dict):
+            raise ValueError(f"Problema #{idx}: atteso oggetto JSON")
+
+        cls = normalize_class(item.get("class_code"))
+        pref = (item.get("preferred_slot") or "any").strip().lower()
+        if pref not in {"lunedi", "giovedi", "any"}:
+            raise ValueError(
+                f"Problema {item.get('id', idx)!r}: preferred_slot non valido: {pref!r}"
+            )
+
+        if not item.get("id"):
+            raise ValueError(f"Problema #{idx}: campo 'id' mancante")
+        if not item.get("title"):
+            raise ValueError(f"Problema {item['id']!r}: campo 'title' mancante")
+        if not item.get("body"):
+            raise ValueError(f"Problema {item['id']!r}: campo 'body' mancante")
+        if not item.get("topic"):
+            raise ValueError(f"Problema {item['id']!r}: campo 'topic' mancante")
+        if not item.get("difficulty"):
+            raise ValueError(f"Problema {item['id']!r}: campo 'difficulty' mancante")
+
+        validated.append(
+            {
+                "id": str(item["id"]),
+                "class_code": cls,
+                "language": str(item.get("language", "")).strip(),
+                "topic": str(item["topic"]).strip(),
+                "difficulty": str(item["difficulty"]).strip(),
+                "preferred_slot": pref,
+                "title": str(item["title"]).strip(),
+                "body": str(item["body"]).strip(),
+                "active": bool(item.get("active", True)),
+            }
+        )
+
+    return validated
+
+
+def choose_problem(
+    problems: list[dict[str, Any]],
+    state: dict[str, Any],
+    class_code: str,
+    slot: str,
+) -> dict[str, Any]:
+    history = state.setdefault("history", {}).setdefault(class_code, [])
 
     candidates = [
-        p for p in problems
-        if p.get('active', True)
-        and p['class_code'] == class_code
-        and p.get('preferred_slot', 'any') in (slot, 'any')
-        and p['id'] not in recent_ids
-        and p['id'] not in published_for_slot
+        p
+        for p in problems
+        if p["active"]
+        and p["class_code"] == class_code
+        and p["preferred_slot"] in {slot, "any"}
     ]
 
     if not candidates:
-        candidates = [
-            p for p in problems
-            if p.get('active', True)
-            and p['class_code'] == class_code
-            and p.get('preferred_slot', 'any') in (slot, 'any')
-            and p['id'] not in published_for_slot
-        ]
+        raise ValueError(f"Nessun problema disponibile per {class_code} / {slot}")
 
-    if not candidates:
-        candidates = [
-            p for p in problems
-            if p.get('active', True)
-            and p['class_code'] == class_code
-            and p.get('preferred_slot', 'any') in (slot, 'any')
-        ]
+    candidates.sort(key=lambda p: p["id"])
+    unused = [p for p in candidates if p["id"] not in history]
 
-    if not candidates:
-        raise RuntimeError(f'Nessun problema disponibile per {class_code} / {slot}')
+    if not unused:
+        history.clear()
+        unused = candidates[:]
 
-    # Prefer less published overall, then random among best
-    counts = {}
-    for p in problems:
-        counts[p['id']] = 0
-    for cls, slot_map in state.get('published', {}).items():
-        for sl, ids in slot_map.items():
-            for pid in ids:
-                counts[pid] = counts.get(pid, 0) + 1
-
-    min_count = min(counts.get(p['id'], 0) for p in candidates)
-    best = [p for p in candidates if counts.get(p['id'], 0) == min_count]
-    chosen = random.choice(best)
-
-    published_for_slot.append(chosen['id'])
-    recent_ids.append(chosen['id'])
-    if len(recent_ids) > recent_limit:
-        del recent_ids[:-recent_limit]
-
+    chosen = unused[0]
+    history.append(chosen["id"])
     return chosen
 
 
-def main():
-    random.seed()
-
-    problems = load_json(PROBLEMS_FILE)
-    current = load_json(CURRENT_FILE)
-    state = load_json(STATE_FILE)
-
-    slot = os.environ.get('FORCE_SLOT', '').strip().lower() or detect_slot()
-    if slot not in SLOTS:
-        raise SystemExit(f'Slot non valido: {slot}')
-
-    for class_code in CLASS_CODES:
-        problem = choose_problem(problems, state, class_code, slot)
-        current.setdefault(class_code, {})[slot] = compact_problem(problem)
-
-    current['updated_at'] = utc_now_iso()
-
-    save_json(CURRENT_FILE, current)
-    save_json(STATE_FILE, state)
-
-    print(f'Aggiornamento completato per slot: {slot}')
+def to_current_item(problem: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "id": problem["id"],
+        "topic": problem["topic"],
+        "difficulty": problem["difficulty"],
+        "title": problem["title"],
+        "body": problem["body"],
+    }
 
 
-if __name__ == '__main__':
+def main() -> None:
+    slot = normalize_slot(os.getenv("FORCE_SLOT"))
+    problems = validate_problems(load_json(PROBLEMS_PATH, []))
+    current = load_json(CURRENT_PATH, default_current())
+    state = load_json(STATE_PATH, default_state())
+
+    if not isinstance(current, dict):
+        current = default_current()
+    if not isinstance(state, dict):
+        state = default_state()
+
+    for class_code in ("3C", "4C"):
+        chosen = choose_problem(problems, state, class_code, slot)
+        current.setdefault(class_code, {})[slot] = to_current_item(chosen)
+
+    current["updated_at"] = datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+    save_json(CURRENT_PATH, current)
+    save_json(STATE_PATH, state)
+
+
+if __name__ == "__main__":
     main()
