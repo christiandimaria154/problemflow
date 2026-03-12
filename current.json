@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione in C che riceve un array di interi e la sua lunghezza e restituisce quanti elementi sono strettamente maggiori della media di tutti i valori presenti nell'array."
     },
     "giovedi": {
-      "id": "3C-C-002",
-      "topic": "puntatori",
+      "id": "3C-C-005",
+      "topic": "matrici",
       "difficulty": "medio",
-      "title": "Scambio tramite puntatori",
-      "body": "Scrivi una funzione che riceve due puntatori a int e scambia i valori contenuti nelle due variabili puntate."
+      "title": "Somma diagonale principale",
+      "body": "Scrivi una funzione che riceve una matrice quadrata di interi e restituisce la somma degli elementi della diagonale principale."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Studente con attributi nome, cognome e media, un costruttore completo e un metodo toString()."
     },
     "giovedi": {
-      "id": "4C-J-002",
-      "topic": "ereditarieta",
+      "id": "4C-J-005",
+      "topic": "ArrayList",
       "difficulty": "medio",
-      "title": "Gerarchia Veicoli",
-      "body": "Definisci una superclasse Veicolo e due sottoclassi Auto e Moto, ognuna con una propria descrizione dell'oggetto."
+      "title": "Media di una lista di voti",
+      "body": "Scrivi un metodo statico che riceve un ArrayList<Integer> e restituisce la media dei valori presenti."
     }
   },
-  "updated_at": "2026-03-11T14:48:41+00:00"
+  "updated_at": "2026-03-12T06:59:07+00:00"
 }
