@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-001",
-      "topic": "funzioni",
+      "id": "3C-C-003",
+      "topic": "array",
       "difficulty": "medio",
-      "title": "Conta sopra la media",
-      "body": "Scrivi una funzione in C che riceve un array di interi e la sua lunghezza e restituisce quanti elementi sono strettamente maggiori della media di tutti i valori presenti nell'array."
+      "title": "Massimo e posizione",
+      "body": "Scrivi una funzione che riceve un array di interi e restituisce il valore massimo e la posizione della sua prima occorrenza."
     },
     "giovedi": {
       "id": "3C-C-005",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-001",
-      "topic": "classi e oggetti",
+      "id": "4C-J-003",
+      "topic": "costruttori e metodi",
       "difficulty": "medio",
-      "title": "Classe Studente",
-      "body": "Definisci una classe Studente con attributi nome, cognome e media, un costruttore completo e un metodo toString()."
+      "title": "Classe Rettangolo",
+      "body": "Definisci una classe Rettangolo con base e altezza, costruttore, metodi area() e perimetro(), e un metodo per stampare i dati dell'oggetto."
     },
     "giovedi": {
       "id": "4C-J-005",
@@ -31,5 +31,5 @@
       "body": "Scrivi un metodo statico che riceve un ArrayList<Integer> e restituisce la media dei valori presenti."
     }
   },
-  "updated_at": "2026-03-12T06:59:07+00:00"
+  "updated_at": "2026-03-16T07:04:22+00:00"
 }
