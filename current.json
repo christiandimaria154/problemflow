@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che riceve un array di interi e restituisce il valore massimo e la posizione della sua prima occorrenza."
     },
     "giovedi": {
-      "id": "3C-C-005",
-      "topic": "matrici",
+      "id": "3C-C-007",
+      "topic": "malloc/free",
       "difficulty": "medio",
-      "title": "Somma diagonale principale",
-      "body": "Scrivi una funzione che riceve una matrice quadrata di interi e restituisce la somma degli elementi della diagonale principale."
+      "title": "Copia solo i positivi",
+      "body": "Scrivi una funzione che riceve un array di interi e crea dinamicamente un nuovo array contenente solo i valori positivi, restituendone anche la nuova lunghezza."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Rettangolo con base e altezza, costruttore, metodi area() e perimetro(), e un metodo per stampare i dati dell'oggetto."
     },
     "giovedi": {
-      "id": "4C-J-005",
-      "topic": "ArrayList",
+      "id": "4C-J-006",
+      "topic": "polimorfismo",
       "difficulty": "medio",
-      "title": "Media di una lista di voti",
-      "body": "Scrivi un metodo statico che riceve un ArrayList<Integer> e restituisce la media dei valori presenti."
+      "title": "Gerarchia Animali",
+      "body": "Definisci una classe Animale con metodo verso() e due sottoclassi che ridefiniscono il metodo. Spiega dove avviene il polimorfismo."
     }
   },
-  "updated_at": "2026-03-16T07:04:22+00:00"
+  "updated_at": "2026-03-19T07:01:02+00:00"
 }
