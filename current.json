@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-003",
-      "topic": "array",
+      "id": "3C-C-004",
+      "topic": "stringhe",
       "difficulty": "medio",
-      "title": "Massimo e posizione",
-      "body": "Scrivi una funzione che riceve un array di interi e restituisce il valore massimo e la posizione della sua prima occorrenza."
+      "title": "Conta vocali",
+      "body": "Scrivi una funzione che riceve una stringa e restituisce il numero totale di vocali presenti, senza distinguere tra maiuscole e minuscole."
     },
     "giovedi": {
       "id": "3C-C-007",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-003",
-      "topic": "costruttori e metodi",
+      "id": "4C-J-004",
+      "topic": "incapsulamento",
       "difficulty": "medio",
-      "title": "Classe Rettangolo",
-      "body": "Definisci una classe Rettangolo con base e altezza, costruttore, metodi area() e perimetro(), e un metodo per stampare i dati dell'oggetto."
+      "title": "ContoBancario protetto",
+      "body": "Definisci una classe ContoBancario con saldo privato e metodi pubblici per deposito, prelievo e lettura del saldo."
     },
     "giovedi": {
       "id": "4C-J-006",
@@ -31,5 +31,5 @@
       "body": "Definisci una classe Animale con metodo verso() e due sottoclassi che ridefiniscono il metodo. Spiega dove avviene il polimorfismo."
     }
   },
-  "updated_at": "2026-03-19T07:01:02+00:00"
+  "updated_at": "2026-03-23T06:57:13+00:00"
 }
