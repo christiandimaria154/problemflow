@@ -8,11 +8,11 @@
       "body": "Definisci una struct Studente con nome e media. Scrivi una funzione che riceve un array di studenti e restituisce l'indice dello studente con la media più alta."
     },
     "giovedi": {
-      "id": "3C-C-008",
-      "topic": "liste",
-      "difficulty": "tosto",
-      "title": "Conta nodi pari",
-      "body": "Data una lista collegata di interi, scrivi una funzione che restituisce quanti nodi contengono un valore pari."
+      "id": "3C-C-011",
+      "topic": "stringhe",
+      "difficulty": "medio",
+      "title": "Stringa palindroma",
+      "body": "Scrivi una funzione che verifica se una stringa è palindroma ignorando eventuali differenze tra maiuscole e minuscole."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Libro con titolo, autore e numero di pagine, costruttore completo e metodo toString()."
     },
     "giovedi": {
-      "id": "4C-J-007",
-      "topic": "classi astratte e interfacce",
-      "difficulty": "tosto",
-      "title": "Figura astratta",
-      "body": "Definisci una classe astratta Figura con metodo area() e due sottoclassi concrete Rettangolo e Cerchio."
+      "id": "4C-J-008",
+      "topic": "eccezioni",
+      "difficulty": "medio",
+      "title": "Divisione sicura",
+      "body": "Scrivi un metodo che divide due interi e gestisce correttamente il caso di divisione per zero."
     }
   },
-  "updated_at": "2026-03-30T07:14:31+00:00"
+  "updated_at": "2026-04-02T07:16:18+00:00"
 }
