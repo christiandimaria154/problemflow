@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-006",
-      "topic": "struct",
-      "difficulty": "medio",
-      "title": "Studente migliore",
-      "body": "Definisci una struct Studente con nome e media. Scrivi una funzione che riceve un array di studenti e restituisce l'indice dello studente con la media più alta."
+      "id": "3C-C-009",
+      "topic": "funzioni",
+      "difficulty": "facile",
+      "title": "Numero di cifre",
+      "body": "Scrivi una funzione che riceve un intero positivo e restituisce quante cifre contiene."
     },
     "giovedi": {
       "id": "3C-C-011",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-009",
-      "topic": "classi e oggetti",
+      "id": "4C-J-010",
+      "topic": "costruttori e metodi",
       "difficulty": "medio",
-      "title": "Classe Libro",
-      "body": "Definisci una classe Libro con titolo, autore e numero di pagine, costruttore completo e metodo toString()."
+      "title": "Classe Prodotto con sconto",
+      "body": "Definisci una classe Prodotto con nome e prezzo e un metodo che restituisce il prezzo scontato di una certa percentuale."
     },
     "giovedi": {
       "id": "4C-J-008",
@@ -31,5 +31,5 @@
       "body": "Scrivi un metodo che divide due interi e gestisce correttamente il caso di divisione per zero."
     }
   },
-  "updated_at": "2026-04-02T07:16:18+00:00"
+  "updated_at": "2026-04-06T07:16:14+00:00"
 }
