@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che riceve un intero positivo e restituisce quante cifre contiene."
     },
     "giovedi": {
-      "id": "3C-C-011",
-      "topic": "stringhe",
+      "id": "3C-C-012",
+      "topic": "puntatori",
       "difficulty": "medio",
-      "title": "Stringa palindroma",
-      "body": "Scrivi una funzione che verifica se una stringa è palindroma ignorando eventuali differenze tra maiuscole e minuscole."
+      "title": "Incrementa tramite puntatore",
+      "body": "Scrivi una funzione che riceve un puntatore a int e incrementa di 1 il valore della variabile puntata."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Prodotto con nome e prezzo e un metodo che restituisce il prezzo scontato di una certa percentuale."
     },
     "giovedi": {
-      "id": "4C-J-008",
-      "topic": "eccezioni",
+      "id": "4C-J-011",
+      "topic": "incapsulamento",
       "difficulty": "medio",
-      "title": "Divisione sicura",
-      "body": "Scrivi un metodo che divide due interi e gestisce correttamente il caso di divisione per zero."
+      "title": "Temperatura controllata",
+      "body": "Definisci una classe Temperatura con valore privato e metodi getter/setter che impediscano di assegnare valori sotto una soglia scelta."
     }
   },
-  "updated_at": "2026-04-06T07:16:14+00:00"
+  "updated_at": "2026-04-09T07:26:08+00:00"
 }
