@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-009",
-      "topic": "funzioni",
-      "difficulty": "facile",
-      "title": "Numero di cifre",
-      "body": "Scrivi una funzione che riceve un intero positivo e restituisce quante cifre contiene."
+      "id": "3C-C-010",
+      "topic": "array",
+      "difficulty": "medio",
+      "title": "Secondo massimo distinto",
+      "body": "Scrivi una funzione che riceve un array di interi e restituisce il secondo valore massimo distinto presente nell'array."
     },
     "giovedi": {
       "id": "3C-C-012",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-010",
-      "topic": "costruttori e metodi",
+      "id": "4C-J-012",
+      "topic": "ArrayList",
       "difficulty": "medio",
-      "title": "Classe Prodotto con sconto",
-      "body": "Definisci una classe Prodotto con nome e prezzo e un metodo che restituisce il prezzo scontato di una certa percentuale."
+      "title": "Conta elementi maggiori di 10",
+      "body": "Scrivi un metodo che riceve un ArrayList<Integer> e restituisce quanti valori sono strettamente maggiori di 10."
     },
     "giovedi": {
       "id": "4C-J-011",
@@ -31,5 +31,5 @@
       "body": "Definisci una classe Temperatura con valore privato e metodi getter/setter che impediscano di assegnare valori sotto una soglia scelta."
     }
   },
-  "updated_at": "2026-04-09T07:26:08+00:00"
+  "updated_at": "2026-04-13T07:46:45+00:00"
 }
