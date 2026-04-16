@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che riceve un array di interi e restituisce il secondo valore massimo distinto presente nell'array."
     },
     "giovedi": {
-      "id": "3C-C-012",
-      "topic": "puntatori",
+      "id": "3C-C-014",
+      "topic": "struct",
       "difficulty": "medio",
-      "title": "Incrementa tramite puntatore",
-      "body": "Scrivi una funzione che riceve un puntatore a int e incrementa di 1 il valore della variabile puntata."
+      "title": "Cerca per nome",
+      "body": "Definisci una struct Prodotto con codice, nome e prezzo. Scrivi una funzione che cerca un prodotto dato il nome e restituisce l'indice della prima occorrenza."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Scrivi un metodo che riceve un ArrayList<Integer> e restituisce quanti valori sono strettamente maggiori di 10."
     },
     "giovedi": {
-      "id": "4C-J-011",
-      "topic": "incapsulamento",
+      "id": "4C-J-013",
+      "topic": "ereditarieta",
       "difficulty": "medio",
-      "title": "Temperatura controllata",
-      "body": "Definisci una classe Temperatura con valore privato e metodi getter/setter che impediscano di assegnare valori sotto una soglia scelta."
+      "title": "Persone della scuola",
+      "body": "Definisci una superclasse Persona e due sottoclassi Studente e Docente con attributi specifici e metodo descrizione()."
     }
   },
-  "updated_at": "2026-04-13T07:46:45+00:00"
+  "updated_at": "2026-04-16T07:50:19+00:00"
 }
