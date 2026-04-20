@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-010",
-      "topic": "array",
+      "id": "3C-C-013",
+      "topic": "matrici",
       "difficulty": "medio",
-      "title": "Secondo massimo distinto",
-      "body": "Scrivi una funzione che riceve un array di interi e restituisce il secondo valore massimo distinto presente nell'array."
+      "title": "Riga con somma massima",
+      "body": "Scrivi una funzione che riceve una matrice di interi e restituisce l'indice della riga con somma totale maggiore."
     },
     "giovedi": {
       "id": "3C-C-014",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-012",
-      "topic": "ArrayList",
+      "id": "4C-J-015",
+      "topic": "classi astratte e interfacce",
       "difficulty": "medio",
-      "title": "Conta elementi maggiori di 10",
-      "body": "Scrivi un metodo che riceve un ArrayList<Integer> e restituisce quanti valori sono strettamente maggiori di 10."
+      "title": "Interfaccia Scontabile",
+      "body": "Definisci un'interfaccia Scontabile con un metodo applicaSconto() e implementala in almeno due classi diverse."
     },
     "giovedi": {
       "id": "4C-J-013",
@@ -31,5 +31,5 @@
       "body": "Definisci una superclasse Persona e due sottoclassi Studente e Docente con attributi specifici e metodo descrizione()."
     }
   },
-  "updated_at": "2026-04-16T07:50:19+00:00"
+  "updated_at": "2026-04-20T07:49:09+00:00"
 }
