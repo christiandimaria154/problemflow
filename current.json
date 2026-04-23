@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che riceve una matrice di interi e restituisce l'indice della riga con somma totale maggiore."
     },
     "giovedi": {
-      "id": "3C-C-014",
-      "topic": "struct",
-      "difficulty": "medio",
-      "title": "Cerca per nome",
-      "body": "Definisci una struct Prodotto con codice, nome e prezzo. Scrivi una funzione che cerca un prodotto dato il nome e restituisce l'indice della prima occorrenza."
+      "id": "3C-C-016",
+      "topic": "liste",
+      "difficulty": "tosto",
+      "title": "Inserimento in testa",
+      "body": "Scrivi una funzione che inserisce un nuovo nodo in testa a una lista collegata di interi."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci un'interfaccia Scontabile con un metodo applicaSconto() e implementala in almeno due classi diverse."
     },
     "giovedi": {
-      "id": "4C-J-013",
-      "topic": "ereditarieta",
+      "id": "4C-J-014",
+      "topic": "polimorfismo",
       "difficulty": "medio",
-      "title": "Persone della scuola",
-      "body": "Definisci una superclasse Persona e due sottoclassi Studente e Docente con attributi specifici e metodo descrizione()."
+      "title": "Pagamenti diversi",
+      "body": "Definisci una gerarchia con una classe astratta Pagamento e sottoclassi Carta e Contanti che implementano un metodo stampaRicevuta()."
     }
   },
-  "updated_at": "2026-04-20T07:49:09+00:00"
+  "updated_at": "2026-04-23T07:57:48+00:00"
 }
