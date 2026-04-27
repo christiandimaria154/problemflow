@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-013",
-      "topic": "matrici",
+      "id": "3C-C-015",
+      "topic": "malloc/free",
       "difficulty": "medio",
-      "title": "Riga con somma massima",
-      "body": "Scrivi una funzione che riceve una matrice di interi e restituisce l'indice della riga con somma totale maggiore."
+      "title": "Duplica array",
+      "body": "Scrivi una funzione che alloca dinamicamente un nuovo array uguale a quello ricevuto in input e ne restituisce il puntatore."
     },
     "giovedi": {
       "id": "3C-C-016",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-015",
-      "topic": "classi astratte e interfacce",
-      "difficulty": "medio",
-      "title": "Interfaccia Scontabile",
-      "body": "Definisci un'interfaccia Scontabile con un metodo applicaSconto() e implementala in almeno due classi diverse."
+      "id": "4C-J-017",
+      "topic": "classi e oggetti",
+      "difficulty": "facile",
+      "title": "Classe Punto",
+      "body": "Definisci una classe Punto con coordinate x e y e un metodo che restituisce la distanza dall'origine."
     },
     "giovedi": {
       "id": "4C-J-014",
@@ -31,5 +31,5 @@
       "body": "Definisci una gerarchia con una classe astratta Pagamento e sottoclassi Carta e Contanti che implementano un metodo stampaRicevuta()."
     }
   },
-  "updated_at": "2026-04-23T07:57:48+00:00"
+  "updated_at": "2026-04-27T08:02:53+00:00"
 }
