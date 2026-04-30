@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che alloca dinamicamente un nuovo array uguale a quello ricevuto in input e ne restituisce il puntatore."
     },
     "giovedi": {
-      "id": "3C-C-016",
-      "topic": "liste",
-      "difficulty": "tosto",
-      "title": "Inserimento in testa",
-      "body": "Scrivi una funzione che inserisce un nuovo nodo in testa a una lista collegata di interi."
+      "id": "3C-C-018",
+      "topic": "array",
+      "difficulty": "medio",
+      "title": "Conta duplicati di un valore",
+      "body": "Scrivi una funzione che riceve un array e un valore target e restituisce quante volte quel valore compare nell'array."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Punto con coordinate x e y e un metodo che restituisce la distanza dall'origine."
     },
     "giovedi": {
-      "id": "4C-J-014",
-      "topic": "polimorfismo",
+      "id": "4C-J-016",
+      "topic": "eccezioni",
       "difficulty": "medio",
-      "title": "Pagamenti diversi",
-      "body": "Definisci una gerarchia con una classe astratta Pagamento e sottoclassi Carta e Contanti che implementano un metodo stampaRicevuta()."
+      "title": "Indice non valido",
+      "body": "Scrivi un metodo che accede a un elemento di un array e gestisce il caso di indice fuori range."
     }
   },
-  "updated_at": "2026-04-27T08:02:53+00:00"
+  "updated_at": "2026-04-30T08:24:30+00:00"
 }
