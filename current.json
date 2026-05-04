@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-015",
-      "topic": "malloc/free",
-      "difficulty": "medio",
-      "title": "Duplica array",
-      "body": "Scrivi una funzione che alloca dinamicamente un nuovo array uguale a quello ricevuto in input e ne restituisce il puntatore."
+      "id": "3C-C-017",
+      "topic": "funzioni",
+      "difficulty": "facile",
+      "title": "Potenza intera",
+      "body": "Scrivi una funzione che riceve due interi base ed esponente non negativo e calcola la potenza usando un ciclo."
     },
     "giovedi": {
       "id": "3C-C-018",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-017",
-      "topic": "classi e oggetti",
-      "difficulty": "facile",
-      "title": "Classe Punto",
-      "body": "Definisci una classe Punto con coordinate x e y e un metodo che restituisce la distanza dall'origine."
+      "id": "4C-J-018",
+      "topic": "costruttori e metodi",
+      "difficulty": "medio",
+      "title": "Classe Automobile",
+      "body": "Definisci una classe Automobile con marca, modello e velocità corrente, più metodi accelera() e frena()."
     },
     "giovedi": {
       "id": "4C-J-016",
@@ -31,5 +31,5 @@
       "body": "Scrivi un metodo che accede a un elemento di un array e gestisce il caso di indice fuori range."
     }
   },
-  "updated_at": "2026-04-30T08:24:30+00:00"
+  "updated_at": "2026-05-04T08:14:50+00:00"
 }
