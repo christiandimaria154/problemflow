@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-017",
-      "topic": "funzioni",
-      "difficulty": "facile",
-      "title": "Potenza intera",
-      "body": "Scrivi una funzione che riceve due interi base ed esponente non negativo e calcola la potenza usando un ciclo."
+      "id": "3C-C-019",
+      "topic": "stringhe",
+      "difficulty": "medio",
+      "title": "Lunghezza senza strlen",
+      "body": "Scrivi una funzione che calcola la lunghezza di una stringa senza usare strlen."
     },
     "giovedi": {
       "id": "3C-C-020",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-018",
-      "topic": "costruttori e metodi",
+      "id": "4C-J-023",
+      "topic": "classi astratte e interfacce",
       "difficulty": "medio",
-      "title": "Classe Automobile",
-      "body": "Definisci una classe Automobile con marca, modello e velocità corrente, più metodi accelera() e frena()."
+      "title": "Ordinabile per nome",
+      "body": "Definisci una classe Studente che implementa un confronto basato sul nome o cognome dell'oggetto."
     },
     "giovedi": {
       "id": "4C-J-019",
@@ -31,5 +31,5 @@
       "body": "Definisci una classe Persona con età privata e un setter che accetti solo valori non negativi."
     }
   },
-  "updated_at": "2026-05-07T08:36:15+00:00"
+  "updated_at": "2026-05-11T08:56:11+00:00"
 }
