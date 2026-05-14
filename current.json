@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che calcola la lunghezza di una stringa senza usare strlen."
     },
     "giovedi": {
-      "id": "3C-C-020",
-      "topic": "puntatori",
+      "id": "3C-C-021",
+      "topic": "matrici",
       "difficulty": "medio",
-      "title": "Confronta due interi",
-      "body": "Scrivi una funzione che riceve due puntatori a int e restituisce 1 se i valori puntati sono uguali, 0 altrimenti."
+      "title": "Colonna con media maggiore",
+      "body": "Scrivi una funzione che riceve una matrice di interi e restituisce l'indice della colonna con media maggiore."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Studente che implementa un confronto basato sul nome o cognome dell'oggetto."
     },
     "giovedi": {
-      "id": "4C-J-019",
-      "topic": "incapsulamento",
+      "id": "4C-J-020",
+      "topic": "ArrayList",
       "difficulty": "medio",
-      "title": "Età valida",
-      "body": "Definisci una classe Persona con età privata e un setter che accetti solo valori non negativi."
+      "title": "Somma dei pari",
+      "body": "Scrivi un metodo che riceve un ArrayList<Integer> e restituisce la somma dei soli valori pari."
     }
   },
-  "updated_at": "2026-05-11T08:56:11+00:00"
+  "updated_at": "2026-05-14T08:39:39+00:00"
 }
