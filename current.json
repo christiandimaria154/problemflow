@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-019",
-      "topic": "stringhe",
+      "id": "3C-C-022",
+      "topic": "struct",
       "difficulty": "medio",
-      "title": "Lunghezza senza strlen",
-      "body": "Scrivi una funzione che calcola la lunghezza di una stringa senza usare strlen."
+      "title": "Prezzo totale magazzino",
+      "body": "Definisci una struct Articolo con nome, prezzo e quantità. Scrivi una funzione che calcola il valore totale del magazzino."
     },
     "giovedi": {
       "id": "3C-C-021",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-023",
-      "topic": "classi astratte e interfacce",
+      "id": "4C-J-025",
+      "topic": "classi e oggetti",
       "difficulty": "medio",
-      "title": "Ordinabile per nome",
-      "body": "Definisci una classe Studente che implementa un confronto basato sul nome o cognome dell'oggetto."
+      "title": "Classe Frazione",
+      "body": "Definisci una classe Frazione con numeratore e denominatore, costruttore e metodo toString()."
     },
     "giovedi": {
       "id": "4C-J-020",
@@ -31,5 +31,5 @@
       "body": "Scrivi un metodo che riceve un ArrayList<Integer> e restituisce la somma dei soli valori pari."
     }
   },
-  "updated_at": "2026-05-14T08:39:39+00:00"
+  "updated_at": "2026-05-18T09:37:00+00:00"
 }
