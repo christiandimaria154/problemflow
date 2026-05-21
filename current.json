@@ -8,11 +8,11 @@
       "body": "Definisci una struct Articolo con nome, prezzo e quantità. Scrivi una funzione che calcola il valore totale del magazzino."
     },
     "giovedi": {
-      "id": "3C-C-021",
-      "topic": "matrici",
+      "id": "3C-C-023",
+      "topic": "malloc/free",
       "difficulty": "medio",
-      "title": "Colonna con media maggiore",
-      "body": "Scrivi una funzione che riceve una matrice di interi e restituisce l'indice della colonna con media maggiore."
+      "title": "Array degli indici pari",
+      "body": "Scrivi una funzione che crea dinamicamente un nuovo array contenente gli elementi presenti nelle posizioni pari dell'array originale."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Frazione con numeratore e denominatore, costruttore e metodo toString()."
     },
     "giovedi": {
-      "id": "4C-J-020",
-      "topic": "ArrayList",
+      "id": "4C-J-021",
+      "topic": "ereditarieta",
       "difficulty": "medio",
-      "title": "Somma dei pari",
-      "body": "Scrivi un metodo che riceve un ArrayList<Integer> e restituisce la somma dei soli valori pari."
+      "title": "Dispositivi elettronici",
+      "body": "Definisci una superclasse Dispositivo e due sottoclassi Smartphone e Tablet che aggiungono attributi specifici."
     }
   },
-  "updated_at": "2026-05-18T09:37:00+00:00"
+  "updated_at": "2026-05-21T09:43:50+00:00"
 }
