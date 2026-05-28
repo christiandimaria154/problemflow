@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che riceve un intero positivo e restituisce la somma dei suoi divisori positivi."
     },
     "giovedi": {
-      "id": "3C-C-023",
-      "topic": "malloc/free",
-      "difficulty": "medio",
-      "title": "Array degli indici pari",
-      "body": "Scrivi una funzione che crea dinamicamente un nuovo array contenente gli elementi presenti nelle posizioni pari dell'array originale."
+      "id": "3C-C-024",
+      "topic": "liste",
+      "difficulty": "tosto",
+      "title": "Elimina primo nodo con valore",
+      "body": "Data una lista collegata di interi e un valore target, scrivi una funzione che elimina la prima occorrenza del valore dalla lista."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Batteria con carica privata e metodi che impediscano di superare 100 o scendere sotto 0."
     },
     "giovedi": {
-      "id": "4C-J-021",
-      "topic": "ereditarieta",
-      "difficulty": "medio",
-      "title": "Dispositivi elettronici",
-      "body": "Definisci una superclasse Dispositivo e due sottoclassi Smartphone e Tablet che aggiungono attributi specifici."
+      "id": "4C-J-022",
+      "topic": "polimorfismo",
+      "difficulty": "tosto",
+      "title": "Dipendenti e stipendio",
+      "body": "Definisci una gerarchia Dipendente con due sottoclassi e un metodo calcolaStipendio() ridefinito in modo diverso."
     }
   },
-  "updated_at": "2026-05-25T09:45:01+00:00"
+  "updated_at": "2026-05-28T10:05:07+00:00"
 }
