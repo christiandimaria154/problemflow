@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-025",
-      "topic": "funzioni",
-      "difficulty": "facile",
-      "title": "Somma divisori",
-      "body": "Scrivi una funzione che riceve un intero positivo e restituisce la somma dei suoi divisori positivi."
+      "id": "3C-C-026",
+      "topic": "array",
+      "difficulty": "medio",
+      "title": "Verifica ordinamento crescente",
+      "body": "Scrivi una funzione che riceve un array di interi e restituisce 1 se è ordinato in senso crescente, 0 altrimenti."
     },
     "giovedi": {
       "id": "3C-C-024",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-027",
-      "topic": "incapsulamento",
+      "id": "4C-J-028",
+      "topic": "ArrayList",
       "difficulty": "medio",
-      "title": "Livello batteria",
-      "body": "Definisci una classe Batteria con carica privata e metodi che impediscano di superare 100 o scendere sotto 0."
+      "title": "Rimuovi duplicati logici",
+      "body": "Scrivi un metodo che riceve un ArrayList<Integer> e costruisce una nuova lista senza ripetizioni."
     },
     "giovedi": {
       "id": "4C-J-022",
@@ -31,5 +31,5 @@
       "body": "Definisci una gerarchia Dipendente con due sottoclassi e un metodo calcolaStipendio() ridefinito in modo diverso."
     }
   },
-  "updated_at": "2026-05-28T10:05:07+00:00"
+  "updated_at": "2026-06-01T11:05:22+00:00"
 }
