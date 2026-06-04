@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che riceve un array di interi e restituisce 1 se è ordinato in senso crescente, 0 altrimenti."
     },
     "giovedi": {
-      "id": "3C-C-024",
-      "topic": "liste",
-      "difficulty": "tosto",
-      "title": "Elimina primo nodo con valore",
-      "body": "Data una lista collegata di interi e un valore target, scrivi una funzione che elimina la prima occorrenza del valore dalla lista."
+      "id": "3C-C-027",
+      "topic": "stringhe",
+      "difficulty": "medio",
+      "title": "Conta parole",
+      "body": "Scrivi una funzione che riceve una stringa e restituisce quante parole contiene, considerando separate le parole da uno o più spazi."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Scrivi un metodo che riceve un ArrayList<Integer> e costruisce una nuova lista senza ripetizioni."
     },
     "giovedi": {
-      "id": "4C-J-022",
-      "topic": "polimorfismo",
-      "difficulty": "tosto",
-      "title": "Dipendenti e stipendio",
-      "body": "Definisci una gerarchia Dipendente con due sottoclassi e un metodo calcolaStipendio() ridefinito in modo diverso."
+      "id": "4C-J-024",
+      "topic": "eccezioni",
+      "difficulty": "medio",
+      "title": "Parsing numerico sicuro",
+      "body": "Scrivi un metodo che converte una stringa in intero e gestisce il caso di formato non valido."
     }
   },
-  "updated_at": "2026-06-01T11:05:22+00:00"
+  "updated_at": "2026-06-04T09:58:08+00:00"
 }
