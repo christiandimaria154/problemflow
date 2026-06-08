@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-026",
-      "topic": "array",
+      "id": "3C-C-028",
+      "topic": "puntatori",
       "difficulty": "medio",
-      "title": "Verifica ordinamento crescente",
-      "body": "Scrivi una funzione che riceve un array di interi e restituisce 1 se è ordinato in senso crescente, 0 altrimenti."
+      "title": "Minimo tra due variabili",
+      "body": "Scrivi una funzione che riceve due puntatori a int e restituisce il valore minore tra quelli puntati."
     },
     "giovedi": {
       "id": "3C-C-027",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-028",
-      "topic": "ArrayList",
+      "id": "4C-J-032",
+      "topic": "eccezioni",
       "difficulty": "medio",
-      "title": "Rimuovi duplicati logici",
-      "body": "Scrivi un metodo che riceve un ArrayList<Integer> e costruisce una nuova lista senza ripetizioni."
+      "title": "Saldo insufficiente",
+      "body": "Scrivi una classe Conto con metodo preleva() che lanci o gestisca un'eccezione in caso di saldo insufficiente."
     },
     "giovedi": {
       "id": "4C-J-024",
@@ -31,5 +31,5 @@
       "body": "Scrivi un metodo che converte una stringa in intero e gestisce il caso di formato non valido."
     }
   },
-  "updated_at": "2026-06-04T09:58:08+00:00"
+  "updated_at": "2026-06-08T10:14:07+00:00"
 }
