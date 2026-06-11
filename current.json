@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che riceve due puntatori a int e restituisce il valore minore tra quelli puntati."
     },
     "giovedi": {
-      "id": "3C-C-027",
-      "topic": "stringhe",
+      "id": "3C-C-029",
+      "topic": "matrici",
       "difficulty": "medio",
-      "title": "Conta parole",
-      "body": "Scrivi una funzione che riceve una stringa e restituisce quante parole contiene, considerando separate le parole da uno o più spazi."
+      "title": "Somma cornice",
+      "body": "Scrivi una funzione che riceve una matrice e restituisce la somma degli elementi presenti sul bordo esterno."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Scrivi una classe Conto con metodo preleva() che lanci o gestisca un'eccezione in caso di saldo insufficiente."
     },
     "giovedi": {
-      "id": "4C-J-024",
-      "topic": "eccezioni",
+      "id": "4C-J-026",
+      "topic": "costruttori e metodi",
       "difficulty": "medio",
-      "title": "Parsing numerico sicuro",
-      "body": "Scrivi un metodo che converte una stringa in intero e gestisce il caso di formato non valido."
+      "title": "Classe Playlist",
+      "body": "Definisci una classe Playlist con titolo e numero di brani, più un metodo aggiungiBrano() che incrementa il conteggio."
     }
   },
-  "updated_at": "2026-06-08T10:14:07+00:00"
+  "updated_at": "2026-06-11T10:38:34+00:00"
 }
