@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-028",
-      "topic": "puntatori",
+      "id": "3C-C-031",
+      "topic": "malloc/free",
       "difficulty": "medio",
-      "title": "Minimo tra due variabili",
-      "body": "Scrivi una funzione che riceve due puntatori a int e restituisce il valore minore tra quelli puntati."
+      "title": "Concatena due array",
+      "body": "Scrivi una funzione che riceve due array di interi e crea dinamicamente un terzo array contenente prima tutti gli elementi del primo e poi quelli del secondo."
     },
     "giovedi": {
       "id": "3C-C-029",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-032",
-      "topic": "eccezioni",
+      "id": "4C-J-033",
+      "topic": "classi e oggetti",
       "difficulty": "medio",
-      "title": "Saldo insufficiente",
-      "body": "Scrivi una classe Conto con metodo preleva() che lanci o gestisca un'eccezione in caso di saldo insufficiente."
+      "title": "Classe Studente con promozione",
+      "body": "Definisci una classe Studente con voto finale e un metodo promosso() che restituisca true o false."
     },
     "giovedi": {
       "id": "4C-J-026",
@@ -31,5 +31,5 @@
       "body": "Definisci una classe Playlist con titolo e numero di brani, più un metodo aggiungiBrano() che incrementa il conteggio."
     }
   },
-  "updated_at": "2026-06-11T10:38:34+00:00"
+  "updated_at": "2026-06-15T11:42:23+00:00"
 }
