@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che riceve due array di interi e crea dinamicamente un terzo array contenente prima tutti gli elementi del primo e poi quelli del secondo."
     },
     "giovedi": {
-      "id": "3C-C-029",
-      "topic": "matrici",
+      "id": "3C-C-030",
+      "topic": "struct",
       "difficulty": "medio",
-      "title": "Somma cornice",
-      "body": "Scrivi una funzione che riceve una matrice e restituisce la somma degli elementi presenti sul bordo esterno."
+      "title": "Studente promosso",
+      "body": "Definisci una struct Studente con nome e voto finale. Scrivi una funzione che conta quanti studenti hanno voto almeno uguale a 6."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Studente con voto finale e un metodo promosso() che restituisca true o false."
     },
     "giovedi": {
-      "id": "4C-J-026",
-      "topic": "costruttori e metodi",
+      "id": "4C-J-029",
+      "topic": "ereditarieta",
       "difficulty": "medio",
-      "title": "Classe Playlist",
-      "body": "Definisci una classe Playlist con titolo e numero di brani, più un metodo aggiungiBrano() che incrementa il conteggio."
+      "title": "Abbonamenti",
+      "body": "Definisci una superclasse Abbonamento e due sottoclassi Mensile e Annuale con costo finale calcolato in modo diverso."
     }
   },
-  "updated_at": "2026-06-15T11:42:23+00:00"
+  "updated_at": "2026-06-18T10:22:45+00:00"
 }
