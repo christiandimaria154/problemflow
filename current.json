@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-031",
-      "topic": "malloc/free",
+      "id": "3C-C-033",
+      "topic": "funzioni",
       "difficulty": "medio",
-      "title": "Concatena due array",
-      "body": "Scrivi una funzione che riceve due array di interi e crea dinamicamente un terzo array contenente prima tutti gli elementi del primo e poi quelli del secondo."
+      "title": "Numero perfetto",
+      "body": "Scrivi una funzione che verifica se un numero è perfetto, cioè uguale alla somma dei suoi divisori positivi escluso se stesso."
     },
     "giovedi": {
       "id": "3C-C-030",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-033",
-      "topic": "classi e oggetti",
+      "id": "4C-J-036",
+      "topic": "ArrayList",
       "difficulty": "medio",
-      "title": "Classe Studente con promozione",
-      "body": "Definisci una classe Studente con voto finale e un metodo promosso() che restituisca true o false."
+      "title": "Elemento massimo",
+      "body": "Scrivi un metodo che riceve un ArrayList<Integer> e restituisce il valore massimo contenuto nella lista."
     },
     "giovedi": {
       "id": "4C-J-029",
@@ -31,5 +31,5 @@
       "body": "Definisci una superclasse Abbonamento e due sottoclassi Mensile e Annuale con costo finale calcolato in modo diverso."
     }
   },
-  "updated_at": "2026-06-18T10:22:45+00:00"
+  "updated_at": "2026-06-22T11:31:21+00:00"
 }
