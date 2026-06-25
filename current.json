@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che verifica se un numero è perfetto, cioè uguale alla somma dei suoi divisori positivi escluso se stesso."
     },
     "giovedi": {
-      "id": "3C-C-030",
-      "topic": "struct",
-      "difficulty": "medio",
-      "title": "Studente promosso",
-      "body": "Definisci una struct Studente con nome e voto finale. Scrivi una funzione che conta quanti studenti hanno voto almeno uguale a 6."
+      "id": "3C-C-032",
+      "topic": "liste",
+      "difficulty": "tosto",
+      "title": "Lunghezza lista",
+      "body": "Data una lista collegata di interi, scrivi una funzione che restituisce il numero totale di nodi presenti."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Scrivi un metodo che riceve un ArrayList<Integer> e restituisce il valore massimo contenuto nella lista."
     },
     "giovedi": {
-      "id": "4C-J-029",
-      "topic": "ereditarieta",
+      "id": "4C-J-030",
+      "topic": "polimorfismo",
       "difficulty": "medio",
-      "title": "Abbonamenti",
-      "body": "Definisci una superclasse Abbonamento e due sottoclassi Mensile e Annuale con costo finale calcolato in modo diverso."
+      "title": "Messaggi notifiche",
+      "body": "Definisci una classe astratta Notifica con metodo invia() e sottoclassi EmailNotifica e SmsNotifica."
     }
   },
-  "updated_at": "2026-06-22T11:31:21+00:00"
+  "updated_at": "2026-06-25T09:24:59+00:00"
 }
