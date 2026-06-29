@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-033",
-      "topic": "funzioni",
+      "id": "3C-C-035",
+      "topic": "stringhe",
       "difficulty": "medio",
-      "title": "Numero perfetto",
-      "body": "Scrivi una funzione che verifica se un numero è perfetto, cioè uguale alla somma dei suoi divisori positivi escluso se stesso."
+      "title": "Prima maiuscola",
+      "body": "Scrivi una funzione che trasforma in maiuscolo solo il primo carattere alfabetico di una stringa, se presente."
     },
     "giovedi": {
       "id": "3C-C-032",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-036",
-      "topic": "ArrayList",
+      "id": "4C-J-038",
+      "topic": "polimorfismo",
       "difficulty": "medio",
-      "title": "Elemento massimo",
-      "body": "Scrivi un metodo che riceve un ArrayList<Integer> e restituisce il valore massimo contenuto nella lista."
+      "title": "Trasporti",
+      "body": "Definisci una gerarchia MezzoTrasporto con metodo descrivi() ridefinito da Bus e Treno."
     },
     "giovedi": {
       "id": "4C-J-030",
@@ -31,5 +31,5 @@
       "body": "Definisci una classe astratta Notifica con metodo invia() e sottoclassi EmailNotifica e SmsNotifica."
     }
   },
-  "updated_at": "2026-06-25T09:24:59+00:00"
+  "updated_at": "2026-06-29T10:18:45+00:00"
 }
