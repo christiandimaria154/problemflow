@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che trasforma in maiuscolo solo il primo carattere alfabetico di una stringa, se presente."
     },
     "giovedi": {
-      "id": "3C-C-032",
-      "topic": "liste",
-      "difficulty": "tosto",
-      "title": "Lunghezza lista",
-      "body": "Data una lista collegata di interi, scrivi una funzione che restituisce il numero totale di nodi presenti."
+      "id": "3C-C-034",
+      "topic": "array",
+      "difficulty": "medio",
+      "title": "Differenza max min",
+      "body": "Scrivi una funzione che riceve un array di interi e restituisce la differenza tra il valore massimo e il valore minimo."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una gerarchia MezzoTrasporto con metodo descrivi() ridefinito da Bus e Treno."
     },
     "giovedi": {
-      "id": "4C-J-030",
-      "topic": "polimorfismo",
-      "difficulty": "medio",
-      "title": "Messaggi notifiche",
-      "body": "Definisci una classe astratta Notifica con metodo invia() e sottoclassi EmailNotifica e SmsNotifica."
+      "id": "4C-J-031",
+      "topic": "classi astratte e interfacce",
+      "difficulty": "tosto",
+      "title": "Misurabile",
+      "body": "Definisci un'interfaccia Misurabile con metodo getMisura() e implementala in classi diverse."
     }
   },
-  "updated_at": "2026-06-29T10:18:45+00:00"
+  "updated_at": "2026-07-02T09:15:04+00:00"
 }
