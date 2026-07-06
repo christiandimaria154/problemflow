@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-035",
-      "topic": "stringhe",
+      "id": "3C-C-037",
+      "topic": "matrici",
       "difficulty": "medio",
-      "title": "Prima maiuscola",
-      "body": "Scrivi una funzione che trasforma in maiuscolo solo il primo carattere alfabetico di una stringa, se presente."
+      "title": "Trasposta logica",
+      "body": "Scrivi una funzione che, data una matrice quadrata, scambi logicamente gli elementi simmetrici rispetto alla diagonale principale."
     },
     "giovedi": {
       "id": "3C-C-034",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-038",
-      "topic": "polimorfismo",
+      "id": "4C-J-041",
+      "topic": "classi e oggetti",
       "difficulty": "medio",
-      "title": "Trasporti",
-      "body": "Definisci una gerarchia MezzoTrasporto con metodo descrivi() ridefinito da Bus e Treno."
+      "title": "Classe Data semplice",
+      "body": "Definisci una classe Data con giorno, mese e anno e metodo toString()."
     },
     "giovedi": {
       "id": "4C-J-031",
@@ -31,5 +31,5 @@
       "body": "Definisci un'interfaccia Misurabile con metodo getMisura() e implementala in classi diverse."
     }
   },
-  "updated_at": "2026-07-02T09:15:04+00:00"
+  "updated_at": "2026-07-06T09:52:28+00:00"
 }
