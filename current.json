@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-037",
-      "topic": "matrici",
+      "id": "3C-C-041",
+      "topic": "funzioni",
       "difficulty": "medio",
-      "title": "Trasposta logica",
-      "body": "Scrivi una funzione che, data una matrice quadrata, scambi logicamente gli elementi simmetrici rispetto alla diagonale principale."
+      "title": "Valore assoluto senza librerie",
+      "body": "Scrivi una funzione che restituisce il valore assoluto di un intero senza usare funzioni di libreria."
     },
     "giovedi": {
       "id": "3C-C-034",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-041",
-      "topic": "classi e oggetti",
+      "id": "4C-J-042",
+      "topic": "costruttori e metodi",
       "difficulty": "medio",
-      "title": "Classe Data semplice",
-      "body": "Definisci una classe Data con giorno, mese e anno e metodo toString()."
+      "title": "Classe Squadra",
+      "body": "Definisci una classe Squadra con nome e punti, più un metodo vittoria() che incrementi i punti di 3."
     },
     "giovedi": {
       "id": "4C-J-031",
@@ -31,5 +31,5 @@
       "body": "Definisci un'interfaccia Misurabile con metodo getMisura() e implementala in classi diverse."
     }
   },
-  "updated_at": "2026-07-06T09:52:28+00:00"
+  "updated_at": "2026-07-13T08:44:35+00:00"
 }
