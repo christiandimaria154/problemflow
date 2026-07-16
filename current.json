@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che restituisce il valore assoluto di un intero senza usare funzioni di libreria."
     },
     "giovedi": {
-      "id": "3C-C-034",
-      "topic": "array",
+      "id": "3C-C-036",
+      "topic": "puntatori",
       "difficulty": "medio",
-      "title": "Differenza max min",
-      "body": "Scrivi una funzione che riceve un array di interi e restituisce la differenza tra il valore massimo e il valore minimo."
+      "title": "Somma tramite puntatori",
+      "body": "Scrivi una funzione che riceve due puntatori a int e restituisce la somma dei due valori puntati."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Squadra con nome e punti, più un metodo vittoria() che incrementi i punti di 3."
     },
     "giovedi": {
-      "id": "4C-J-031",
-      "topic": "classi astratte e interfacce",
-      "difficulty": "tosto",
-      "title": "Misurabile",
-      "body": "Definisci un'interfaccia Misurabile con metodo getMisura() e implementala in classi diverse."
+      "id": "4C-J-034",
+      "topic": "costruttori e metodi",
+      "difficulty": "medio",
+      "title": "Classe Cerchio",
+      "body": "Definisci una classe Cerchio con raggio, costruttore, metodi area() e circonferenza()."
     }
   },
-  "updated_at": "2026-07-13T08:44:35+00:00"
+  "updated_at": "2026-07-16T08:16:03+00:00"
 }
