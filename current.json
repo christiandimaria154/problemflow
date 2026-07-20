@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-041",
-      "topic": "funzioni",
+      "id": "3C-C-042",
+      "topic": "array",
       "difficulty": "medio",
-      "title": "Valore assoluto senza librerie",
-      "body": "Scrivi una funzione che restituisce il valore assoluto di un intero senza usare funzioni di libreria."
+      "title": "Media dei pari",
+      "body": "Scrivi una funzione che riceve un array di interi e restituisce la media dei soli valori pari presenti."
     },
     "giovedi": {
       "id": "3C-C-036",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-042",
-      "topic": "costruttori e metodi",
+      "id": "4C-J-045",
+      "topic": "ereditarieta",
       "difficulty": "medio",
-      "title": "Classe Squadra",
-      "body": "Definisci una classe Squadra con nome e punti, più un metodo vittoria() che incrementi i punti di 3."
+      "title": "Eventi",
+      "body": "Definisci una superclasse Evento e due sottoclassi Concerto e Conferenza con attributi specifici."
     },
     "giovedi": {
       "id": "4C-J-034",
@@ -31,5 +31,5 @@
       "body": "Definisci una classe Cerchio con raggio, costruttore, metodi area() e circonferenza()."
     }
   },
-  "updated_at": "2026-07-16T08:16:03+00:00"
+  "updated_at": "2026-07-20T08:36:14+00:00"
 }
