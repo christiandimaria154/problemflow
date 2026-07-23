@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che riceve un array di interi e restituisce la media dei soli valori pari presenti."
     },
     "giovedi": {
-      "id": "3C-C-036",
-      "topic": "puntatori",
+      "id": "3C-C-038",
+      "topic": "struct",
       "difficulty": "medio",
-      "title": "Somma tramite puntatori",
-      "body": "Scrivi una funzione che riceve due puntatori a int e restituisce la somma dei due valori puntati."
+      "title": "Cliente più anziano",
+      "body": "Definisci una struct Cliente con nome ed età. Scrivi una funzione che restituisce l'indice del cliente più anziano."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una superclasse Evento e due sottoclassi Concerto e Conferenza con attributi specifici."
     },
     "giovedi": {
-      "id": "4C-J-034",
-      "topic": "costruttori e metodi",
+      "id": "4C-J-035",
+      "topic": "incapsulamento",
       "difficulty": "medio",
-      "title": "Classe Cerchio",
-      "body": "Definisci una classe Cerchio con raggio, costruttore, metodi area() e circonferenza()."
+      "title": "Prezzo non negativo",
+      "body": "Definisci una classe Prodotto con prezzo privato e setter che rifiuti valori negativi."
     }
   },
-  "updated_at": "2026-07-20T08:36:14+00:00"
+  "updated_at": "2026-07-23T08:32:17+00:00"
 }
