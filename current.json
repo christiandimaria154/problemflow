@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-042",
-      "topic": "array",
+      "id": "3C-C-001",
+      "topic": "funzioni",
       "difficulty": "medio",
-      "title": "Media dei pari",
-      "body": "Scrivi una funzione che riceve un array di interi e restituisce la media dei soli valori pari presenti."
+      "title": "Conta sopra la media",
+      "body": "Scrivi una funzione in C che riceve un array di interi e la sua lunghezza e restituisce quanti elementi sono strettamente maggiori della media di tutti i valori presenti nell'array."
     },
     "giovedi": {
       "id": "3C-C-038",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-045",
-      "topic": "ereditarieta",
+      "id": "4C-J-001",
+      "topic": "classi e oggetti",
       "difficulty": "medio",
-      "title": "Eventi",
-      "body": "Definisci una superclasse Evento e due sottoclassi Concerto e Conferenza con attributi specifici."
+      "title": "Classe Studente",
+      "body": "Definisci una classe Studente con attributi nome, cognome e media, un costruttore completo e un metodo toString()."
     },
     "giovedi": {
       "id": "4C-J-035",
@@ -31,5 +31,5 @@
       "body": "Definisci una classe Prodotto con prezzo privato e setter che rifiuti valori negativi."
     }
   },
-  "updated_at": "2026-07-23T08:32:17+00:00"
+  "updated_at": "2026-07-27T09:25:29+00:00"
 }
