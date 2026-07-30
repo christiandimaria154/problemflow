@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione in C che riceve un array di interi e la sua lunghezza e restituisce quanti elementi sono strettamente maggiori della media di tutti i valori presenti nell'array."
     },
     "giovedi": {
-      "id": "3C-C-038",
-      "topic": "struct",
+      "id": "3C-C-002",
+      "topic": "puntatori",
       "difficulty": "medio",
-      "title": "Cliente più anziano",
-      "body": "Definisci una struct Cliente con nome ed età. Scrivi una funzione che restituisce l'indice del cliente più anziano."
+      "title": "Scambio tramite puntatori",
+      "body": "Scrivi una funzione che riceve due puntatori a int e scambia i valori contenuti nelle due variabili puntate."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Studente con attributi nome, cognome e media, un costruttore completo e un metodo toString()."
     },
     "giovedi": {
-      "id": "4C-J-035",
-      "topic": "incapsulamento",
+      "id": "4C-J-002",
+      "topic": "ereditarieta",
       "difficulty": "medio",
-      "title": "Prezzo non negativo",
-      "body": "Definisci una classe Prodotto con prezzo privato e setter che rifiuti valori negativi."
+      "title": "Gerarchia Veicoli",
+      "body": "Definisci una superclasse Veicolo e due sottoclassi Auto e Moto, ognuna con una propria descrizione dell'oggetto."
     }
   },
-  "updated_at": "2026-07-27T09:25:29+00:00"
+  "updated_at": "2026-07-30T08:28:07+00:00"
 }
