@@ -8,11 +8,11 @@
       "body": "Scrivi una funzione che riceve una stringa e restituisce il numero totale di vocali presenti, senza distinguere tra maiuscole e minuscole."
     },
     "giovedi": {
-      "id": "3C-C-005",
-      "topic": "matrici",
+      "id": "3C-C-007",
+      "topic": "malloc/free",
       "difficulty": "medio",
-      "title": "Somma diagonale principale",
-      "body": "Scrivi una funzione che riceve una matrice quadrata di interi e restituisce la somma degli elementi della diagonale principale."
+      "title": "Copia solo i positivi",
+      "body": "Scrivi una funzione che riceve un array di interi e crea dinamicamente un nuovo array contenente solo i valori positivi, restituendone anche la nuova lunghezza."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe ContoBancario con saldo privato e metodi pubblici per deposito, prelievo e lettura del saldo."
     },
     "giovedi": {
-      "id": "4C-J-005",
-      "topic": "ArrayList",
+      "id": "4C-J-006",
+      "topic": "polimorfismo",
       "difficulty": "medio",
-      "title": "Media di una lista di voti",
-      "body": "Scrivi un metodo statico che riceve un ArrayList<Integer> e restituisce la media dei valori presenti."
+      "title": "Gerarchia Animali",
+      "body": "Definisci una classe Animale con metodo verso() e due sottoclassi che ridefiniscono il metodo. Spiega dove avviene il polimorfismo."
     }
   },
-  "updated_at": "2026-08-10T07:06:49+00:00"
+  "updated_at": "2026-08-13T07:35:34+00:00"
 }
