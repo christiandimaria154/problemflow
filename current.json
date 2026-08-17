@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-004",
-      "topic": "stringhe",
+      "id": "3C-C-006",
+      "topic": "struct",
       "difficulty": "medio",
-      "title": "Conta vocali",
-      "body": "Scrivi una funzione che riceve una stringa e restituisce il numero totale di vocali presenti, senza distinguere tra maiuscole e minuscole."
+      "title": "Studente migliore",
+      "body": "Definisci una struct Studente con nome e media. Scrivi una funzione che riceve un array di studenti e restituisce l'indice dello studente con la media più alta."
     },
     "giovedi": {
       "id": "3C-C-007",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-004",
-      "topic": "incapsulamento",
+      "id": "4C-J-009",
+      "topic": "classi e oggetti",
       "difficulty": "medio",
-      "title": "ContoBancario protetto",
-      "body": "Definisci una classe ContoBancario con saldo privato e metodi pubblici per deposito, prelievo e lettura del saldo."
+      "title": "Classe Libro",
+      "body": "Definisci una classe Libro con titolo, autore e numero di pagine, costruttore completo e metodo toString()."
     },
     "giovedi": {
       "id": "4C-J-006",
@@ -31,5 +31,5 @@
       "body": "Definisci una classe Animale con metodo verso() e due sottoclassi che ridefiniscono il metodo. Spiega dove avviene il polimorfismo."
     }
   },
-  "updated_at": "2026-08-13T07:35:34+00:00"
+  "updated_at": "2026-08-17T06:30:10+00:00"
 }
