@@ -8,11 +8,11 @@
       "body": "Definisci una struct Studente con nome e media. Scrivi una funzione che riceve un array di studenti e restituisce l'indice dello studente con la media più alta."
     },
     "giovedi": {
-      "id": "3C-C-007",
-      "topic": "malloc/free",
-      "difficulty": "medio",
-      "title": "Copia solo i positivi",
-      "body": "Scrivi una funzione che riceve un array di interi e crea dinamicamente un nuovo array contenente solo i valori positivi, restituendone anche la nuova lunghezza."
+      "id": "3C-C-008",
+      "topic": "liste",
+      "difficulty": "tosto",
+      "title": "Conta nodi pari",
+      "body": "Data una lista collegata di interi, scrivi una funzione che restituisce quanti nodi contengono un valore pari."
     }
   },
   "4C": {
@@ -24,12 +24,12 @@
       "body": "Definisci una classe Libro con titolo, autore e numero di pagine, costruttore completo e metodo toString()."
     },
     "giovedi": {
-      "id": "4C-J-006",
-      "topic": "polimorfismo",
-      "difficulty": "medio",
-      "title": "Gerarchia Animali",
-      "body": "Definisci una classe Animale con metodo verso() e due sottoclassi che ridefiniscono il metodo. Spiega dove avviene il polimorfismo."
+      "id": "4C-J-007",
+      "topic": "classi astratte e interfacce",
+      "difficulty": "tosto",
+      "title": "Figura astratta",
+      "body": "Definisci una classe astratta Figura con metodo area() e due sottoclassi concrete Rettangolo e Cerchio."
     }
   },
-  "updated_at": "2026-08-17T06:30:10+00:00"
+  "updated_at": "2026-08-20T06:47:08+00:00"
 }
