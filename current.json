@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-017",
-      "topic": "funzioni",
-      "difficulty": "facile",
-      "title": "Potenza intera",
-      "body": "Scrivi una funzione che riceve due interi base ed esponente non negativo e calcola la potenza usando un ciclo."
+      "id": "3C-C-019",
+      "topic": "stringhe",
+      "difficulty": "medio",
+      "title": "Lunghezza senza strlen",
+      "body": "Scrivi una funzione che calcola la lunghezza di una stringa senza usare strlen."
     },
     "giovedi": {
       "id": "3C-C-018",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-018",
-      "topic": "costruttori e metodi",
+      "id": "4C-J-023",
+      "topic": "classi astratte e interfacce",
       "difficulty": "medio",
-      "title": "Classe Automobile",
-      "body": "Definisci una classe Automobile con marca, modello e velocità corrente, più metodi accelera() e frena()."
+      "title": "Ordinabile per nome",
+      "body": "Definisci una classe Studente che implementa un confronto basato sul nome o cognome dell'oggetto."
     },
     "giovedi": {
       "id": "4C-J-016",
@@ -31,5 +31,5 @@
       "body": "Scrivi un metodo che accede a un elemento di un array e gestisce il caso di indice fuori range."
     }
   },
-  "updated_at": "2026-09-24T11:16:48+00:00"
+  "updated_at": "2026-09-28T12:15:09+00:00"
 }
