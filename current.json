@@ -1,11 +1,11 @@
 {
   "3C": {
     "lunedi": {
-      "id": "3C-C-022",
-      "topic": "struct",
-      "difficulty": "medio",
-      "title": "Prezzo totale magazzino",
-      "body": "Definisci una struct Articolo con nome, prezzo e quantità. Scrivi una funzione che calcola il valore totale del magazzino."
+      "id": "3C-C-025",
+      "topic": "funzioni",
+      "difficulty": "facile",
+      "title": "Somma divisori",
+      "body": "Scrivi una funzione che riceve un intero positivo e restituisce la somma dei suoi divisori positivi."
     },
     "giovedi": {
       "id": "3C-C-021",
@@ -17,11 +17,11 @@
   },
   "4C": {
     "lunedi": {
-      "id": "4C-J-025",
-      "topic": "classi e oggetti",
+      "id": "4C-J-027",
+      "topic": "incapsulamento",
       "difficulty": "medio",
-      "title": "Classe Frazione",
-      "body": "Definisci una classe Frazione con numeratore e denominatore, costruttore e metodo toString()."
+      "title": "Livello batteria",
+      "body": "Definisci una classe Batteria con carica privata e metodi che impediscano di superare 100 o scendere sotto 0."
     },
     "giovedi": {
       "id": "4C-J-020",
@@ -31,5 +31,5 @@
       "body": "Scrivi un metodo che riceve un ArrayList<Integer> e restituisce la somma dei soli valori pari."
     }
   },
-  "updated_at": "2026-10-08T12:58:22+00:00"
+  "updated_at": "2026-10-12T13:47:04+00:00"
 }
